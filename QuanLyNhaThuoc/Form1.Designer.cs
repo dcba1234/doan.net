@@ -90,6 +90,8 @@
             this.txtpassword.Size = new System.Drawing.Size(206, 22);
             this.txtpassword.TabIndex = 15;
             this.txtpassword.Text = "Mật khẩu";
+            this.txtpassword.Enter += new System.EventHandler(this.txtpassword_Enter);
+            this.txtpassword.Leave += new System.EventHandler(this.txtpassword_Leave);
             // 
             // panel1
             // 
@@ -110,6 +112,8 @@
             this.txtid.Size = new System.Drawing.Size(219, 22);
             this.txtid.TabIndex = 13;
             this.txtid.Text = "Tên đăng nhập";
+            this.txtid.Enter += new System.EventHandler(this.txtid_Enter);
+            this.txtid.Leave += new System.EventHandler(this.txtid_Leave);
             // 
             // button1
             // 
@@ -119,6 +123,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Đăng nhập";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

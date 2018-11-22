@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace DAL
 {
-    public class GetData : DBConnect
+    public class DAL_nhanvien : DBConnect
     {
         public int dangNhap(string id, string pass)
         {

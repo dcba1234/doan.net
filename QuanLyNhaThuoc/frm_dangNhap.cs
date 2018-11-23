@@ -27,7 +27,8 @@ namespace QuanLyNhaThuoc
             }
             else
             {
-                thuoc f = new thuoc();
+                // thuoc f = new thuoc();
+                frm_trangchu f = new frm_trangchu(this);
                 f.ShowDialog();
             }
            

@@ -38,7 +38,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(677, 158);
+            this.button2.Location = new System.Drawing.Point(912, 164);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 27);
             this.button2.TabIndex = 9;
@@ -47,7 +47,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(677, 124);
+            this.button1.Location = new System.Drawing.Point(912, 130);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 8;
@@ -56,7 +56,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(677, 91);
+            this.btn_them.Location = new System.Drawing.Point(912, 97);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(87, 27);
             this.btn_them.TabIndex = 7;
@@ -65,7 +65,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 48);
+            this.textBox1.Location = new System.Drawing.Point(271, 54);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(322, 20);
             this.textBox1.TabIndex = 6;
@@ -77,7 +77,7 @@
             this.dg_thuoc.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dg_thuoc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dg_thuoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg_thuoc.Location = new System.Drawing.Point(36, 92);
+            this.dg_thuoc.Location = new System.Drawing.Point(271, 98);
             this.dg_thuoc.Name = "dg_thuoc";
             this.dg_thuoc.ReadOnly = true;
             this.dg_thuoc.Size = new System.Drawing.Size(621, 310);
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1099, 542);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_them);

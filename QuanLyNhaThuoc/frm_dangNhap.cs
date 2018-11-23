@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using BUS;
 namespace QuanLyNhaThuoc
 {
-    public partial class Form1 : Form
+    public partial class frm_dangNhap : Form
     {
         private BUS_nhanvien nv = new BUS_nhanvien();
-        public Form1()
+        public frm_dangNhap()
         {
             InitializeComponent();
         }
@@ -48,13 +48,26 @@ namespace QuanLyNhaThuoc
         private void txtpassword_Enter(object sender, EventArgs e)
         {
             if (txtpassword.Text == "Mật khẩu")
+            {
                 txtpassword.Text = "";
+                txtpassword.UseSystemPasswordChar = false;
+            } 
+                
         }
 
         private void txtpassword_Leave(object sender, EventArgs e)
         {
             if (txtpassword.Text == "")
-                txtpassword.Text = "Mật khẩu";
+            {
+                 txtpassword.Text = "Mật khẩu";
+                txtpassword.UseSystemPasswordChar = true;
+            }
+               
+        }
+
+        private void frm_dangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

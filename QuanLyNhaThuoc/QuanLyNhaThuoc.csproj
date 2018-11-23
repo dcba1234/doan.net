@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frm_dangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm_dangNhap.Designer.cs">
+      <DependentUpon>frm_dangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="hienThi.cs">
       <SubType>Form</SubType>
@@ -71,8 +71,8 @@
     <Compile Include="thuoc.Designer.cs">
       <DependentUpon>thuoc.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frm_dangNhap.resx">
+      <DependentUpon>frm_dangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hienThi.resx">
       <DependentUpon>hienThi.cs</DependentUpon>

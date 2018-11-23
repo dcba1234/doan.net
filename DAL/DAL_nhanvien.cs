@@ -15,7 +15,7 @@ namespace DAL
             SqlCommand cmd = new SqlCommand("checkLogin", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@user", id));
-            cmd.Parameters.Add(new SqlParameter("@pass", id));
+            cmd.Parameters.Add(new SqlParameter("@pass", pass));
             int kq = (int)cmd.ExecuteScalar();
             closeC();
             return kq;

@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Object;
 namespace QuanLyNhaThuoc
 {
     public partial class frm_trangchu : Form
     {
-        private Form ff;
-        public frm_trangchu(Form f)
+        private frm_dangNhap ff;
+        public nguoiDung nd = new nguoiDung();
+        
+        public frm_trangchu(frm_dangNhap f)
         {
             InitializeComponent();
             ff = f;
+            
         }
 
         private void userControl_thuoc1_Load(object sender, EventArgs e)
@@ -29,8 +32,15 @@ namespace QuanLyNhaThuoc
             panel_side.Height = btn_thuoc.Height;
             panel_side.Top = btn_thuoc.Top;
             userControl_thuoc1.BringToFront();
+            lb_name.Text = ff.nd.Ten;
+            userControl_taikhoan1.nd = ff.nd;
+
+            userControl_taikhoan1.lb_id.Text = ff.nd.Ten;
+            userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
+            userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;
 
         }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -72,6 +82,18 @@ namespace QuanLyNhaThuoc
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
            
+        }
+
+        private void btn_taikhoan_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_taikhoan.Height;
+            userControl_taikhoan1.BringToFront();
+            panel_side.Top = btn_taikhoan.Top;
+        }
+
+        private void lb_name_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

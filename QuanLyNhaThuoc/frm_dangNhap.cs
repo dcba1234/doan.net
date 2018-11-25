@@ -8,15 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Object;
+
 namespace QuanLyNhaThuoc
 {
     public partial class frm_dangNhap : Form
     {
         private BUS_nhanvien nv = new BUS_nhanvien();
         public nguoiDung nd = new nguoiDung();
+        private BUS_nguoidung data = new BUS_nguoidung();
         public frm_dangNhap()
         {
             InitializeComponent();
+           
+            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,10 +35,11 @@ namespace QuanLyNhaThuoc
             else
             {
                 // thuoc f = new thuoc();
-                nd.name = txtid.Text;
+              
                 //nd.quyen = 
                 frm_trangchu f = new frm_trangchu(this);
-
+                nd = data.getData(txtid.Text);
+                nd.Matkhau = txtpassword.Text;
                 f.ShowDialog();
             }
            

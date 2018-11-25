@@ -20,5 +20,8 @@ namespace DAL
             closeC();
             return kq;
         }
+
+
+
     }
 }

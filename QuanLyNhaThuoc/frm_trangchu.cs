@@ -26,6 +26,9 @@ namespace QuanLyNhaThuoc
 
         private void frm_trangchu_Load(object sender, EventArgs e)
         {
+            panel_side.Height = btn_thuoc.Height;
+            panel_side.Top = btn_thuoc.Top;
+            userControl_thuoc1.BringToFront();
 
         }
 

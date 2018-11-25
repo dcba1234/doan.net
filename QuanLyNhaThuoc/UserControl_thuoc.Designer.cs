@@ -95,6 +95,7 @@
             this.Controls.Add(this.btn_them);
             this.Name = "UserControl_thuoc";
             this.Size = new System.Drawing.Size(749, 404);
+            this.Load += new System.EventHandler(this.UserControl_thuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_thuoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

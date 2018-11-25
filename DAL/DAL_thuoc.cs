@@ -7,12 +7,19 @@ using System.Data;
 using System.Data.SqlClient;
 namespace DAL
 {
-    public class DAL_thuoc
+    public class DAL_thuoc:DBConnect
     {
-        
-
-
-
-     
+       public DataTable select()
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_select_thuoc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+            
+        }
     }
 }

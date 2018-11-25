@@ -32,7 +32,7 @@ namespace QuanLyNhaThuoc
             panel_side.Height = btn_thuoc.Height;
             panel_side.Top = btn_thuoc.Top;
             userControl_thuoc1.BringToFront();
-            lb_name.Text = ff.nd.Ten;
+            label2.Text = ff.nd.Ten;
             userControl_taikhoan1.nd = ff.nd;
 
             userControl_taikhoan1.lb_id.Text = ff.nd.Ten;
@@ -92,6 +92,11 @@ namespace QuanLyNhaThuoc
         }
 
         private void lb_name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

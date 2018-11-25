@@ -51,7 +51,7 @@ namespace QuanLyNhaThuoc
         {
             // nguoidung.changePass()
             Form parentForm = (this.Parent as Form);
-            MessageBox.Show("");
+           // MessageBox.Show(parentForm.nd.name);
         }
     }
 }

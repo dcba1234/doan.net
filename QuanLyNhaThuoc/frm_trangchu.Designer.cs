@@ -40,7 +40,7 @@
             this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lb_name = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -183,16 +183,16 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Xin chào:";
             // 
-            // lb_name
+            // label2
             // 
-            this.lb_name.AutoSize = true;
-            this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(306, 25);
-            this.lb_name.Name = "lb_name";
-            this.lb_name.Size = new System.Drawing.Size(65, 24);
-            this.lb_name.TabIndex = 7;
-            this.lb_name.Text = "Admin";
-            this.lb_name.Click += new System.EventHandler(this.lb_name_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(306, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Admin";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -220,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 602);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.lb_name);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -248,7 +248,7 @@
         private UserControl_thuoc userControl_thuoc1;
         private UserControl_banhang userControl_banhang1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lb_name;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_nhanvien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_taikhoan;

@@ -14,12 +14,13 @@ namespace QuanLyNhaThuoc
     {
         private frm_dangNhap ff;
         public nguoiDung nd = new nguoiDung();
-        
+        public string test = "sss";
         public frm_trangchu(frm_dangNhap f)
         {
             InitializeComponent();
             ff = f;
-            
+            // userControl_taikhoan1.ParentForm = this;
+          
         }
 
         private void userControl_thuoc1_Load(object sender, EventArgs e)
@@ -33,8 +34,8 @@ namespace QuanLyNhaThuoc
             panel_side.Top = btn_thuoc.Top;
             userControl_thuoc1.BringToFront();
             label2.Text = ff.nd.Ten;
-            userControl_taikhoan1.nd = ff.nd;
-
+            //userControl_taikhoan1.nd = ff.nd;
+            nd = ff.nd;
             userControl_taikhoan1.lb_id.Text = ff.nd.Ten;
             userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
             userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;

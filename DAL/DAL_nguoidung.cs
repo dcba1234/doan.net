@@ -45,7 +45,8 @@ namespace DAL
             nguoiDung nd = new nguoiDung();
             SqlCommand cmd = new SqlCommand("sp_checklogin_changepass", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@id", id));
+            cmd.Parameters.Add(new SqlParameter("@user", id));
+            cmd.Parameters.Add(new SqlParameter("@pass", pass));
             cmd.ExecuteNonQuery();
            
             closeC();

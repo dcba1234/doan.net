@@ -49,9 +49,14 @@ namespace QuanLyNhaThuoc
 
         private void btn_luu_Click(object sender, EventArgs e)
         {
-            // nguoidung.changePass()
-            Form parentForm = (this.Parent as Form);
-           // MessageBox.Show(parentForm.nd.name);
+            MessageBox.Show("Đổi mật khẩu thành công");
+            checkbox.Checked = false;
+           // frm_trangchu parentForm = (this.Parent as frm_trangchu);
+            frm_trangchu f = (frm_trangchu)this.Parent.Parent;
+            //MessageBox.Show(f.nd.Ten);
+            string pass = txtpassword.Text;
+            nguoidung.changePass(f.nd.Tendangnhap, pass);
+            txtpassword.Text = pass;
         }
     }
 }

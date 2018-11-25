@@ -13,6 +13,7 @@ namespace QuanLyNhaThuoc
     public partial class frm_dangNhap : Form
     {
         private BUS_nhanvien nv = new BUS_nhanvien();
+        public nguoiDung nd = new nguoiDung();
         public frm_dangNhap()
         {
             InitializeComponent();
@@ -28,7 +29,10 @@ namespace QuanLyNhaThuoc
             else
             {
                 // thuoc f = new thuoc();
+                nd.name = txtid.Text;
+                //nd.quyen = 
                 frm_trangchu f = new frm_trangchu(this);
+
                 f.ShowDialog();
             }
            

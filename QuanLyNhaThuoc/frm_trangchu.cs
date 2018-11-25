@@ -44,5 +44,31 @@ namespace QuanLyNhaThuoc
             }
             
         }
+
+        private void btn_thuoc_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_thuoc.Height;
+            panel_side.Top = btn_thuoc.Top;
+            userControl_thuoc1.BringToFront();
+           // MessageBox.Show("s");
+            
+        }
+
+        private void btn_banhang_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_banhang.Height;
+            userControl_banhang1.BringToFront();
+            panel_side.Top = btn_banhang.Top;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+           
+        }
     }
 }

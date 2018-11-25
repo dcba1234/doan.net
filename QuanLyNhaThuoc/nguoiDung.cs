@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-namespace DAL
+
+namespace QuanLyNhaThuoc
 {
-    public class DAL_thuoc
+    public class nguoiDung
     {
-        
-
-
-
-     
+        public string name;
+        public string quyen;
     }
 }

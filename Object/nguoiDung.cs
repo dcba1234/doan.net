@@ -13,18 +13,78 @@ namespace Object
         private string quyen;
         private string tendangnhap;
         private string matkhau;
-        public string Matkhau { get => matkhau; set => matkhau = value; }
-        public string Manv { get => manv; set => manv = value; }
-        public string Ten { get => ten; set => ten = value; }
-        public string Quyen { get => quyen; set => quyen = value; }
-        public string Tendangnhap { get => tendangnhap; set => tendangnhap = value; }
+
+        public string Manv
+        {
+            get
+            {
+                return manv;
+            }
+
+            set
+            {
+                manv = value;
+            }
+        }
+
+        public string Ten
+        {
+            get
+            {
+                return ten;
+            }
+
+            set
+            {
+                ten = value;
+            }
+        }
+
+        public string Quyen
+        {
+            get
+            {
+                return quyen;
+            }
+
+            set
+            {
+                quyen = value;
+            }
+        }
+
+        public string Tendangnhap
+        {
+            get
+            {
+                return tendangnhap;
+            }
+
+            set
+            {
+                tendangnhap = value;
+            }
+        }
+
+        public string Matkhau
+        {
+            get
+            {
+                return matkhau;
+            }
+
+            set
+            {
+                matkhau = value;
+            }
+        }
 
         public nguoiDung(string manv, string ten, string quyen, string tendangnhap)
         {
-            this.manv = manv;
-            this.ten = ten;
-            this.quyen = quyen;
-            this.tendangnhap = tendangnhap;
+            this.Manv = manv;
+            this.Ten = ten;
+            this.Quyen = quyen;
+            this.Tendangnhap = tendangnhap;
         }
         public nguoiDung()
         {

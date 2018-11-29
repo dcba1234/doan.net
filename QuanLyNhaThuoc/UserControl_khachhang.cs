@@ -15,6 +15,7 @@ namespace QuanLyNhaThuoc
         public UserControl_khachhang()
         {
             InitializeComponent();
+
         }
 
         private void btn_them_Click(object sender, EventArgs e)

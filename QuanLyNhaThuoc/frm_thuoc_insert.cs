@@ -79,9 +79,18 @@ namespace QuanLyNhaThuoc
         {   
             switch (f.button){
                 case "insert":
-                    if (!check(txt_mathuoc.Text))
-                        themdl();
-                    else MessageBox.Show("Đã tồn tại mã thuốc");
+                    if(txt_mathuoc.Text != "") {
+                        if (!check(txt_mathuoc.Text))
+                            themdl();
+                        else MessageBox.Show("Đã tồn tại mã thuốc");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không để trống mã thuốc");
+                    }
+                    
+                   
+                    
                     break;
                 case "update":
                     

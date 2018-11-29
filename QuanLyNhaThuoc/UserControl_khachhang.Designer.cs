@@ -68,15 +68,15 @@
             this.dg_khachhang.ReadOnly = true;
             this.dg_khachhang.RowHeadersVisible = false;
             this.dg_khachhang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_khachhang.Size = new System.Drawing.Size(781, 345);
+            this.dg_khachhang.Size = new System.Drawing.Size(403, 345);
             this.dg_khachhang.TabIndex = 21;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(688, 424);
+            this.button2.Location = new System.Drawing.Point(324, 423);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 42);
+            this.button2.Size = new System.Drawing.Size(124, 42);
             this.button2.TabIndex = 25;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(520, 424);
+            this.button1.Location = new System.Drawing.Point(201, 423);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 42);
+            this.button1.Size = new System.Drawing.Size(117, 42);
             this.button1.TabIndex = 24;
             this.button1.Text = "Sửa";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(363, 424);
+            this.btn_them.Location = new System.Drawing.Point(79, 423);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(138, 42);
+            this.btn_them.Size = new System.Drawing.Size(116, 42);
             this.btn_them.TabIndex = 23;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;

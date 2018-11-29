@@ -10,12 +10,13 @@ namespace DAL
 {
     public class DAL_donthuoc : DBConnect
     {
-        public DataTable select()
+        public DataTable select(string makh)
         {
             openC();
             DataTable tb = new DataTable();
             SqlCommand cmd = new SqlCommand("sp_select_donthuoc", con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@makh", makh));
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(tb);
             closeC();

@@ -12,10 +12,10 @@ namespace BUS
     public class BUS_donthuoc
     {
         DAL_donthuoc d = new DAL_donthuoc();
-        public DataTable select()
+        public DataTable select(string makh)
         {
 
-            return d.select();
+            return d.select(makh);
         }
         public void insert(donthuoc dt)
         {

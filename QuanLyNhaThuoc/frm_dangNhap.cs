@@ -79,7 +79,7 @@ namespace QuanLyNhaThuoc
 
         private void frm_dangNhap_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -32,7 +32,7 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@maKH", k.MaKH));
             cmd.Parameters.Add(new SqlParameter("@tenKH", k.TenKH));
             cmd.Parameters.Add(new SqlParameter("@soDT", k.SoDT));
-            cmd.Parameters.Add(new SqlParameter("@donthuoc", k.Donthuoc));
+            
          
             cmd.ExecuteNonQuery();
 
@@ -47,7 +47,7 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@maKH", k.MaKH));
             cmd.Parameters.Add(new SqlParameter("@tenKH", k.TenKH));
             cmd.Parameters.Add(new SqlParameter("@soDT", k.SoDT));
-            cmd.Parameters.Add(new SqlParameter("@donthuoc", k.Donthuoc));
+            
 
             cmd.ExecuteNonQuery();
 

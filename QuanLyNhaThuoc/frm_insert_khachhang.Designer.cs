@@ -93,6 +93,7 @@
             this.btn_ok.TabIndex = 6;
             this.btn_ok.Text = "Lưu";
             this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // frm_insert_khachhang
             // 

@@ -18,8 +18,11 @@ namespace BUS
             
             return thuoc.select();
         }
-        
+        public DataTable search(string ten)
+        {
 
+            return thuoc.search(ten);
+        }
         public void insert(thuoc t)
         {
             thuoc.insert(t);

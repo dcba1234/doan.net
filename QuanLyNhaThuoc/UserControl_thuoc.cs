@@ -26,7 +26,7 @@ namespace QuanLyNhaThuoc
         private void btn_them_Click(object sender, EventArgs e)
         {
             button = "insert";
-            loaithuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[1].Value.ToString();
+            //loaithuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[1].Value.ToString();
             frm_thuoc_insert f = new frm_thuoc_insert(this);
             f.ShowDialog();
         }
@@ -37,9 +37,20 @@ namespace QuanLyNhaThuoc
         }
 
         public void load()
-        {
+        {   
+           
             tb = t.select();
             dg_thuoc.DataSource = tb;
+            if (dg_thuoc.RowCount == 0)
+            {
+                button1.Enabled = false;
+                button2.Enabled = false;
+            }
+            else
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +66,12 @@ namespace QuanLyNhaThuoc
             t.Mathuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[0].Value.ToString();
             this.t.delete(t);
             load();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (!txttimkiem.Equals("")) dg_thuoc.DataSource = t.search(txttimkiem.Text);
+            else dg_thuoc.DataSource = t.select();
         }
     }
 }

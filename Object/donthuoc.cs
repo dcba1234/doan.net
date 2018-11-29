@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Object
 {
-    class donthuoc
+    public class donthuoc
     {
         private string madon;
         private string tendon;

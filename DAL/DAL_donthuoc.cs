@@ -22,5 +22,52 @@ namespace DAL
             return tb;
 
         }
+        public void insert(donthuoc dt)
+        {
+            openC();
+
+            SqlCommand cmd = new SqlCommand("sp_insert_donthuoc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@madon", dt.Madon));
+            cmd.Parameters.Add(new SqlParameter("@tendon", dt.Tendon));
+            cmd.Parameters.Add(new SqlParameter("@ghichu", dt.Ghichu));
+            cmd.Parameters.Add(new SqlParameter("@anh", dt.Anh));
+            cmd.Parameters.Add(new SqlParameter("@ngay", dt.Ngay));
+            cmd.Parameters.Add(new SqlParameter("@maKH", dt.MaKH));
+
+            cmd.ExecuteNonQuery();
+
+            closeC();
+        }
+        public void update(donthuoc dt)
+        {
+            openC();
+
+            SqlCommand cmd = new SqlCommand("sp_update_donthuoc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@madon", dt.Madon));
+            cmd.Parameters.Add(new SqlParameter("@tendon", dt.Tendon));
+            cmd.Parameters.Add(new SqlParameter("@ghichu", dt.Ghichu));
+            cmd.Parameters.Add(new SqlParameter("@anh", dt.Anh));
+            cmd.Parameters.Add(new SqlParameter("@ngay", dt.Ngay));
+            cmd.Parameters.Add(new SqlParameter("@maKH", dt.MaKH));
+
+            cmd.ExecuteNonQuery();
+
+            closeC();
+        }
+        public void delete(donthuoc dt)
+        {
+            openC();
+
+            SqlCommand cmd = new SqlCommand("sp_delete_donthuoc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@madon", dt.Madon));
+           
+
+            cmd.ExecuteNonQuery();
+
+            closeC();
+        }
     }
 }

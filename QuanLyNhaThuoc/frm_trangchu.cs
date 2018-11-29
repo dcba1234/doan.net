@@ -115,5 +115,12 @@ namespace QuanLyNhaThuoc
             userControl_banhang1.BringToFront();
             panel_side.Top = btn_nhanvien.Top;
         }
+
+        private void btn_khachhang_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_khachhang.Height;
+           // userControl_banhang1.BringToFront();
+            panel_side.Top = btn_khachhang.Top;
+        }
     }
 }

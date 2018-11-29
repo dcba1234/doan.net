@@ -23,6 +23,19 @@ namespace DAL
             return tb;
             
         }
+        public DataTable search(string ten)
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_search_thuoc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@tenthuoc", ten));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+
+        }
         public void insert(thuoc t)
         {
             openC();
@@ -46,6 +59,7 @@ namespace DAL
            
 
         }
+        
         public void update(thuoc t)
         {
             openC();

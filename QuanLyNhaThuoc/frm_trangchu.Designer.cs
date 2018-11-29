@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_kho = new System.Windows.Forms.Button();
-            this.btn_taikhoan = new System.Windows.Forms.Button();
-            this.btn_nhanvien = new System.Windows.Forms.Button();
-            this.btn_banhang = new System.Windows.Forms.Button();
             this.panel_side = new System.Windows.Forms.Panel();
-            this.btn_thuoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
+            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
+            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
-            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
-            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
+            this.btn_khachhang = new System.Windows.Forms.Button();
+            this.btn_kho = new System.Windows.Forms.Button();
+            this.btn_taikhoan = new System.Windows.Forms.Button();
+            this.btn_nhanvien = new System.Windows.Forms.Button();
+            this.btn_banhang = new System.Windows.Forms.Button();
+            this.btn_thuoc = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btn_khachhang);
             this.panel1.Controls.Add(this.btn_kho);
             this.panel1.Controls.Add(this.btn_taikhoan);
             this.panel1.Controls.Add(this.btn_nhanvien);
@@ -63,70 +65,6 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // btn_kho
-            // 
-            this.btn_kho.FlatAppearance.BorderSize = 0;
-            this.btn_kho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_kho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kho.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_kho.Image = global::QuanLyNhaThuoc.Properties.Resources.delivery;
-            this.btn_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_kho.Location = new System.Drawing.Point(12, 214);
-            this.btn_kho.Name = "btn_kho";
-            this.btn_kho.Size = new System.Drawing.Size(188, 64);
-            this.btn_kho.TabIndex = 8;
-            this.btn_kho.Text = "Kho";
-            this.btn_kho.UseVisualStyleBackColor = true;
-            this.btn_kho.Click += new System.EventHandler(this.btn_kho_Click);
-            // 
-            // btn_taikhoan
-            // 
-            this.btn_taikhoan.FlatAppearance.BorderSize = 0;
-            this.btn_taikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_taikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_taikhoan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_taikhoan.Image = global::QuanLyNhaThuoc.Properties.Resources.settings;
-            this.btn_taikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_taikhoan.Location = new System.Drawing.Point(12, 375);
-            this.btn_taikhoan.Name = "btn_taikhoan";
-            this.btn_taikhoan.Size = new System.Drawing.Size(188, 72);
-            this.btn_taikhoan.TabIndex = 7;
-            this.btn_taikhoan.Text = "Tài khoản";
-            this.btn_taikhoan.UseVisualStyleBackColor = true;
-            this.btn_taikhoan.Click += new System.EventHandler(this.btn_taikhoan_Click);
-            // 
-            // btn_nhanvien
-            // 
-            this.btn_nhanvien.FlatAppearance.BorderSize = 0;
-            this.btn_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhanvien.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_nhanvien.Image = global::QuanLyNhaThuoc.Properties.Resources.user2;
-            this.btn_nhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhanvien.Location = new System.Drawing.Point(12, 290);
-            this.btn_nhanvien.Name = "btn_nhanvien";
-            this.btn_nhanvien.Size = new System.Drawing.Size(188, 72);
-            this.btn_nhanvien.TabIndex = 6;
-            this.btn_nhanvien.Text = "Nhân viên";
-            this.btn_nhanvien.UseVisualStyleBackColor = true;
-            this.btn_nhanvien.Click += new System.EventHandler(this.btn_nhanvien_Click);
-            // 
-            // btn_banhang
-            // 
-            this.btn_banhang.FlatAppearance.BorderSize = 0;
-            this.btn_banhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_banhang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_banhang.Image = global::QuanLyNhaThuoc.Properties.Resources.shopping_cart;
-            this.btn_banhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_banhang.Location = new System.Drawing.Point(12, 140);
-            this.btn_banhang.Name = "btn_banhang";
-            this.btn_banhang.Size = new System.Drawing.Size(188, 64);
-            this.btn_banhang.TabIndex = 5;
-            this.btn_banhang.Text = "Bán hàng";
-            this.btn_banhang.UseVisualStyleBackColor = true;
-            this.btn_banhang.Click += new System.EventHandler(this.btn_banhang_Click);
-            // 
             // panel_side
             // 
             this.panel_side.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -134,22 +72,6 @@
             this.panel_side.Name = "panel_side";
             this.panel_side.Size = new System.Drawing.Size(7, 64);
             this.panel_side.TabIndex = 4;
-            // 
-            // btn_thuoc
-            // 
-            this.btn_thuoc.FlatAppearance.BorderSize = 0;
-            this.btn_thuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thuoc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_thuoc.Image = global::QuanLyNhaThuoc.Properties.Resources.pills;
-            this.btn_thuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thuoc.Location = new System.Drawing.Point(12, 70);
-            this.btn_thuoc.Name = "btn_thuoc";
-            this.btn_thuoc.Size = new System.Drawing.Size(188, 64);
-            this.btn_thuoc.TabIndex = 1;
-            this.btn_thuoc.Text = "Thuốc";
-            this.btn_thuoc.UseVisualStyleBackColor = true;
-            this.btn_thuoc.Click += new System.EventHandler(this.btn_thuoc_Click);
             // 
             // panel2
             // 
@@ -160,6 +82,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(957, 517);
             this.panel2.TabIndex = 4;
+            // 
+            // userControl_taikhoan1
+            // 
+            this.userControl_taikhoan1.Location = new System.Drawing.Point(-3, 0);
+            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
+            this.userControl_taikhoan1.Size = new System.Drawing.Size(960, 514);
+            this.userControl_taikhoan1.TabIndex = 2;
+            // 
+            // userControl_banhang1
+            // 
+            this.userControl_banhang1.Location = new System.Drawing.Point(-3, -26);
+            this.userControl_banhang1.Name = "userControl_banhang1";
+            this.userControl_banhang1.Size = new System.Drawing.Size(990, 517);
+            this.userControl_banhang1.TabIndex = 1;
+            // 
+            // userControl_thuoc1
+            // 
+            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 0);
+            this.userControl_thuoc1.Name = "userControl_thuoc1";
+            this.userControl_thuoc1.Size = new System.Drawing.Size(987, 502);
+            this.userControl_thuoc1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -212,26 +155,101 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // userControl_taikhoan1
+            // btn_khachhang
             // 
-            this.userControl_taikhoan1.Location = new System.Drawing.Point(-3, 0);
-            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
-            this.userControl_taikhoan1.Size = new System.Drawing.Size(960, 514);
-            this.userControl_taikhoan1.TabIndex = 2;
+            this.btn_khachhang.FlatAppearance.BorderSize = 0;
+            this.btn_khachhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_khachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_khachhang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_khachhang.Image = global::QuanLyNhaThuoc.Properties.Resources.teamwork;
+            this.btn_khachhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_khachhang.Location = new System.Drawing.Point(7, 373);
+            this.btn_khachhang.Name = "btn_khachhang";
+            this.btn_khachhang.Size = new System.Drawing.Size(188, 72);
+            this.btn_khachhang.TabIndex = 9;
+            this.btn_khachhang.Text = "Khách hàng";
+            this.btn_khachhang.UseVisualStyleBackColor = true;
+            this.btn_khachhang.Click += new System.EventHandler(this.btn_khachhang_Click);
             // 
-            // userControl_banhang1
+            // btn_kho
             // 
-            this.userControl_banhang1.Location = new System.Drawing.Point(-3, -26);
-            this.userControl_banhang1.Name = "userControl_banhang1";
-            this.userControl_banhang1.Size = new System.Drawing.Size(990, 517);
-            this.userControl_banhang1.TabIndex = 1;
+            this.btn_kho.FlatAppearance.BorderSize = 0;
+            this.btn_kho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kho.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kho.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_kho.Image = global::QuanLyNhaThuoc.Properties.Resources.delivery;
+            this.btn_kho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kho.Location = new System.Drawing.Point(12, 214);
+            this.btn_kho.Name = "btn_kho";
+            this.btn_kho.Size = new System.Drawing.Size(188, 64);
+            this.btn_kho.TabIndex = 8;
+            this.btn_kho.Text = "Kho";
+            this.btn_kho.UseVisualStyleBackColor = true;
+            this.btn_kho.Click += new System.EventHandler(this.btn_kho_Click);
             // 
-            // userControl_thuoc1
+            // btn_taikhoan
             // 
-            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_thuoc1.Name = "userControl_thuoc1";
-            this.userControl_thuoc1.Size = new System.Drawing.Size(987, 502);
-            this.userControl_thuoc1.TabIndex = 0;
+            this.btn_taikhoan.FlatAppearance.BorderSize = 0;
+            this.btn_taikhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_taikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_taikhoan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_taikhoan.Image = global::QuanLyNhaThuoc.Properties.Resources.settings;
+            this.btn_taikhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_taikhoan.Location = new System.Drawing.Point(12, 459);
+            this.btn_taikhoan.Name = "btn_taikhoan";
+            this.btn_taikhoan.Size = new System.Drawing.Size(188, 72);
+            this.btn_taikhoan.TabIndex = 7;
+            this.btn_taikhoan.Text = "Tài khoản";
+            this.btn_taikhoan.UseVisualStyleBackColor = true;
+            this.btn_taikhoan.Click += new System.EventHandler(this.btn_taikhoan_Click);
+            // 
+            // btn_nhanvien
+            // 
+            this.btn_nhanvien.FlatAppearance.BorderSize = 0;
+            this.btn_nhanvien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhanvien.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_nhanvien.Image = global::QuanLyNhaThuoc.Properties.Resources.user2;
+            this.btn_nhanvien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhanvien.Location = new System.Drawing.Point(12, 290);
+            this.btn_nhanvien.Name = "btn_nhanvien";
+            this.btn_nhanvien.Size = new System.Drawing.Size(188, 72);
+            this.btn_nhanvien.TabIndex = 6;
+            this.btn_nhanvien.Text = "Nhân viên";
+            this.btn_nhanvien.UseVisualStyleBackColor = true;
+            this.btn_nhanvien.Click += new System.EventHandler(this.btn_nhanvien_Click);
+            // 
+            // btn_banhang
+            // 
+            this.btn_banhang.FlatAppearance.BorderSize = 0;
+            this.btn_banhang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_banhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_banhang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_banhang.Image = global::QuanLyNhaThuoc.Properties.Resources.shopping_cart;
+            this.btn_banhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_banhang.Location = new System.Drawing.Point(12, 140);
+            this.btn_banhang.Name = "btn_banhang";
+            this.btn_banhang.Size = new System.Drawing.Size(188, 64);
+            this.btn_banhang.TabIndex = 5;
+            this.btn_banhang.Text = "Bán hàng";
+            this.btn_banhang.UseVisualStyleBackColor = true;
+            this.btn_banhang.Click += new System.EventHandler(this.btn_banhang_Click);
+            // 
+            // btn_thuoc
+            // 
+            this.btn_thuoc.FlatAppearance.BorderSize = 0;
+            this.btn_thuoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_thuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thuoc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_thuoc.Image = global::QuanLyNhaThuoc.Properties.Resources.pills;
+            this.btn_thuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thuoc.Location = new System.Drawing.Point(12, 70);
+            this.btn_thuoc.Name = "btn_thuoc";
+            this.btn_thuoc.Size = new System.Drawing.Size(188, 64);
+            this.btn_thuoc.TabIndex = 1;
+            this.btn_thuoc.Text = "Thuốc";
+            this.btn_thuoc.UseVisualStyleBackColor = true;
+            this.btn_thuoc.Click += new System.EventHandler(this.btn_thuoc_Click);
             // 
             // frm_trangchu
             // 
@@ -274,5 +292,6 @@
         private UserControl_taikhoan userControl_taikhoan1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_kho;
+        private System.Windows.Forms.Button btn_khachhang;
     }
 }

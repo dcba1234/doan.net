@@ -18,6 +18,7 @@ namespace BUS
             
             return thuoc.select();
         }
+        
 
         public void insert(thuoc t)
         {

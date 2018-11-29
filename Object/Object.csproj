@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="donthuoc.cs" />
+    <Compile Include="khachHang.cs" />
     <Compile Include="nguoiDung.cs" />
+    <Compile Include="nhaCC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="thuoc.cs" />
   </ItemGroup>

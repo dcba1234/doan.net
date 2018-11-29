@@ -44,7 +44,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyNhaThuoc.Properties.Resources.password;
-            this.pictureBox2.Location = new System.Drawing.Point(116, 153);
+            this.pictureBox2.Location = new System.Drawing.Point(116, 151);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 19);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -55,7 +55,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(116, 171);
+            this.panel2.Location = new System.Drawing.Point(113, 171);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 1);
             this.panel2.TabIndex = 18;
@@ -84,7 +84,7 @@
             // 
             this.txtpassword.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Location = new System.Drawing.Point(143, 150);
+            this.txtpassword.Location = new System.Drawing.Point(144, 150);
             this.txtpassword.Multiline = true;
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';

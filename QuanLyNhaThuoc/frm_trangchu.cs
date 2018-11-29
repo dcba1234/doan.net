@@ -101,5 +101,19 @@ namespace QuanLyNhaThuoc
         {
 
         }
+
+        private void btn_kho_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_kho.Height;
+            userControl_banhang1.BringToFront();
+            panel_side.Top = btn_kho.Top;
+        }
+
+        private void btn_nhanvien_Click(object sender, EventArgs e)
+        {
+            panel_side.Height = btn_nhanvien.Height;
+            userControl_banhang1.BringToFront();
+            panel_side.Top = btn_nhanvien.Top;
+        }
     }
 }

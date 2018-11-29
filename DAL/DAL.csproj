@@ -45,8 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL_ctHoadon.cs" />
+    <Compile Include="DAL_ctLothuoc.cs" />
     <Compile Include="DAL_donthuoc.cs" />
+    <Compile Include="DAL_hoaDon.cs" />
     <Compile Include="DAL_khachHang.cs" />
+    <Compile Include="DAL_loThuoc.cs" />
     <Compile Include="DAL_nguoidung.cs" />
     <Compile Include="DAL_nhaCC.cs" />
     <Compile Include="DBConnect.cs" />

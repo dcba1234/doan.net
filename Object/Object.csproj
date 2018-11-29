@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctHoadon.cs" />
+    <Compile Include="ctLothuoc.cs" />
     <Compile Include="donthuoc.cs" />
+    <Compile Include="hoaDon.cs" />
     <Compile Include="khachHang.cs" />
+    <Compile Include="loThuoc.cs" />
     <Compile Include="nguoiDung.cs" />
     <Compile Include="nhaCC.cs" />
+    <Compile Include="nhanvien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="thuoc.cs" />
   </ItemGroup>

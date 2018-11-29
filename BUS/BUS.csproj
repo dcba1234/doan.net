@@ -45,8 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_ctHoadon.cs" />
+    <Compile Include="BUS_ctLothuoc.cs" />
     <Compile Include="BUS_donthuoc.cs" />
+    <Compile Include="BUS_hoaDon.cs" />
     <Compile Include="BUS_khachHang.cs" />
+    <Compile Include="BUS_loThuoc.cs" />
     <Compile Include="BUS_nguoidung.cs" />
     <Compile Include="BUS_nhaCC.cs" />
     <Compile Include="BUS_nhanvien.cs" />

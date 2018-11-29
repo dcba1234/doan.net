@@ -20,37 +20,156 @@ namespace Object
         private String donvitinh;
         private String ghichu;
 
-       
+        public string Mathuoc
+        {
+            get
+            {
+                return mathuoc;
+            }
+
+            set
+            {
+                mathuoc = value;
+            }
+        }
+
+        public string Tenthuoc
+        {
+            get
+            {
+                return tenthuoc;
+            }
+
+            set
+            {
+                tenthuoc = value;
+            }
+        }
+
+        public string Loaithuoc
+        {
+            get
+            {
+                return loaithuoc;
+            }
+
+            set
+            {
+                loaithuoc = value;
+            }
+        }
+
+        public string Congdung
+        {
+            get
+            {
+                return congdung;
+            }
+
+            set
+            {
+                congdung = value;
+            }
+        }
+
+        public string HanSD
+        {
+            get
+            {
+                return hanSD;
+            }
+
+            set
+            {
+                hanSD = value;
+            }
+        }
+
+        public string Thuocdacbiet
+        {
+            get
+            {
+                return thuocdacbiet;
+            }
+
+            set
+            {
+                thuocdacbiet = value;
+            }
+        }
+
+        public string Tacdungphu
+        {
+            get
+            {
+                return tacdungphu;
+            }
+
+            set
+            {
+                tacdungphu = value;
+            }
+        }
+
+        public string Chongchidinh
+        {
+            get
+            {
+                return chongchidinh;
+            }
+
+            set
+            {
+                chongchidinh = value;
+            }
+        }
+
+        public string Dongia
+        {
+            get
+            {
+                return dongia;
+            }
+
+            set
+            {
+                dongia = value;
+            }
+        }
+
+        public string Donvitinh
+        {
+            get
+            {
+                return donvitinh;
+            }
+
+            set
+            {
+                donvitinh = value;
+            }
+        }
+
+        public string Ghichu
+        {
+            get
+            {
+                return ghichu;
+            }
+
+            set
+            {
+                ghichu = value;
+            }
+        }
+
         public thuoc()
         {
             
         }
 
-        public thuoc(string mathuoc, string tenthuoc, string loaithuoc, string congdung, string hanSD, string thuocdacbiet, string tacdungphu, string chongchidinh, string dongia, string donvitinh, string ghichu)
-        {
-            Mathuoc = mathuoc;
-            Tenthuoc = tenthuoc;
-            Loaithuoc = loaithuoc;
-            Congdung = congdung;
-            HanSD = hanSD;
-            Thuocdacbiet = thuocdacbiet;
-            Tacdungphu = tacdungphu;
-            Chongchidinh = chongchidinh;
-            Dongia = dongia;
-            Donvitinh = donvitinh;
-            Ghichu = ghichu;
-        }
+       
 
-        public string Mathuoc { get => mathuoc; set => mathuoc = value; }
-        public string Tenthuoc { get => tenthuoc; set => tenthuoc = value; }
-        public string Loaithuoc { get => loaithuoc; set => loaithuoc = value; }
-        public string Congdung { get => congdung; set => congdung = value; }
-        public string HanSD { get => hanSD; set => hanSD = value; }
-        public string Thuocdacbiet { get => thuocdacbiet; set => thuocdacbiet = value; }
-        public string Tacdungphu { get => tacdungphu; set => tacdungphu = value; }
-        public string Chongchidinh { get => chongchidinh; set => chongchidinh = value; }
-        public string Dongia { get => dongia; set => dongia = value; }
-        public string Donvitinh { get => donvitinh; set => donvitinh = value; }
-        public string Ghichu { get => ghichu; set => ghichu = value; }
+        
     }
 }

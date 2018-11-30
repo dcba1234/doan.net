@@ -107,6 +107,12 @@
     <Compile Include="UserControl_khachhang.Designer.cs">
       <DependentUpon>UserControl_khachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_nhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_nhanvien.Designer.cs">
+      <DependentUpon>UserControl_nhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_taikhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_khachhang.resx">
       <DependentUpon>UserControl_khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_nhanvien.resx">
+      <DependentUpon>UserControl_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_taikhoan.resx">
       <DependentUpon>UserControl_taikhoan.cs</DependentUpon>

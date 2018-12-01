@@ -55,7 +55,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(113, 171);
+            this.panel2.Location = new System.Drawing.Point(117, 171);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 1);
             this.panel2.TabIndex = 18;

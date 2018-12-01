@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
+using Object;
 namespace BUS
 {
     public class BUS_nhanvien
@@ -14,6 +16,37 @@ namespace BUS
         {
 
             return nv.dangNhap(id,pass);
+        }
+        public int check_id(string id)
+        {
+
+            return nv.check_id(id);
+        }
+        public DataTable select()
+        {       
+            return nv.select();
+        }
+        public void insert(nhanvien t)
+        {
+            nv.insert(t);
+        }
+        public void update(nhanvien t)
+        {
+            nv.update(t);
+        }
+        public void delete(nhanvien t)
+        {
+            nv.delete(t);
+        }
+        public void taotaikhoan(string id, string pass, string mnv, string quyen)
+        {
+            nv.taotaikhoan( id,  pass,  mnv,  quyen);
+        }
+
+        public void capquyentaikhoan(string id, string quyen)
+        {
+            nv.capquyentaikhoan(id, quyen);
+
         }
     }
 }

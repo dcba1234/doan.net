@@ -33,6 +33,7 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
+            this.btn_quyen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg_nhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.btn_xoa.TabIndex = 28;
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
@@ -79,27 +81,42 @@
             this.btn_sua.TabIndex = 27;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // btn_them
             // 
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(237, 426);
+            this.btn_them.Location = new System.Drawing.Point(219, 426);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(169, 42);
             this.btn_them.TabIndex = 26;
             this.btn_them.Text = "Thêm ";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // btn_quyen
+            // 
+            this.btn_quyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_quyen.Location = new System.Drawing.Point(44, 426);
+            this.btn_quyen.Name = "btn_quyen";
+            this.btn_quyen.Size = new System.Drawing.Size(169, 42);
+            this.btn_quyen.TabIndex = 29;
+            this.btn_quyen.Text = "Cấp quyền";
+            this.btn_quyen.UseVisualStyleBackColor = true;
+            this.btn_quyen.Click += new System.EventHandler(this.btn_quyen_Click);
             // 
             // UserControl_nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_quyen);
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.dg_nhanvien);
             this.Name = "UserControl_nhanvien";
             this.Size = new System.Drawing.Size(822, 532);
+            this.Load += new System.EventHandler(this.UserControl_nhanvien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_nhanvien)).EndInit();
             this.ResumeLayout(false);
 
@@ -111,5 +128,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_sua;
         public System.Windows.Forms.Button btn_them;
+        public System.Windows.Forms.Button btn_quyen;
     }
 }

@@ -60,6 +60,7 @@
             this.lb_id.Size = new System.Drawing.Size(62, 24);
             this.lb_id.TabIndex = 1;
             this.lb_id.Text = "admin";
+            this.lb_id.Click += new System.EventHandler(this.lb_id_Click);
             // 
             // lb_quyentruycap
             // 

@@ -45,16 +45,17 @@ namespace QuanLyNhaThuoc
                     if (txt_mkh.Text != "")
                     {
                         if (!check(txt_mkh.Text))
-                        {
+                        {   
+                            
                             themdl();
                             f.load_donthuoc();
                         }
                             
-                        else MessageBox.Show("Đã tồn tại mã thuốc");
+                        else MessageBox.Show("Đã tồn tại mã khách hàng");
                     }
                     else
                     {
-                        MessageBox.Show("Không để trống mã thuốc");
+                        MessageBox.Show("Không để trống mã khách hàng");
                     }
 
 
@@ -98,7 +99,7 @@ namespace QuanLyNhaThuoc
                // MessageBox.Show(f.dg_khachhang.Rows[0].Cells[0].Value.ToString());
                 for (int i = 0; i < d.RowCount; i++)
                 {
-                    if (manv == f.dg_khachhang.Rows[i].Cells[0].Value.ToString())
+                    if (manv == f.dg_khachhang.Rows[i].Cells[0].Value.ToString().Trim())
                     {
                         c = true;
                         break;

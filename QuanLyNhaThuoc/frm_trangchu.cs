@@ -36,9 +36,11 @@ namespace QuanLyNhaThuoc
             label2.Text = ff.nd.Ten;
             //userControl_taikhoan1.nd = ff.nd;
             nd = ff.nd;
-            userControl_taikhoan1.lb_id.Text = ff.nd.Ten;
+            userControl_taikhoan1.lb_id.Text = ff.nd.Tendangnhap;
             userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
             userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;
+
+            
 
         }
         
@@ -69,10 +71,19 @@ namespace QuanLyNhaThuoc
         }
 
         private void btn_banhang_Click(object sender, EventArgs e)
-        {
-            panel_side.Height = btn_banhang.Height;
-            userControl_banhang1.BringToFront();
-            panel_side.Top = btn_banhang.Top;
+        {   //quyen = 1 2 3 -> ql banhhang kho
+            
+            if (nd.Quyen.Trim() == "1" || nd.Quyen.Trim() == "2")
+            {
+                panel_side.Height = btn_banhang.Height;
+                userControl_banhang1.BringToFront();
+                panel_side.Top = btn_banhang.Top;
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền vào đây");
+            }
+            
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -104,16 +115,31 @@ namespace QuanLyNhaThuoc
 
         private void btn_kho_Click(object sender, EventArgs e)
         {
-            panel_side.Height = btn_kho.Height;
-            userControl_banhang1.BringToFront();
-            panel_side.Top = btn_kho.Top;
+            if (nd.Quyen.Trim() == "1" || nd.Quyen.Trim() == "3")
+            {
+                panel_side.Height = btn_kho.Height;
+                userControl_banhang1.BringToFront();
+                panel_side.Top = btn_kho.Top;
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền vào đây");
+            }
+
         }
 
         private void btn_nhanvien_Click(object sender, EventArgs e)
         {
-            panel_side.Height = btn_nhanvien.Height;
-            userControl_banhang1.BringToFront();
-            panel_side.Top = btn_nhanvien.Top;
+            if (nd.Quyen.Trim() == "1" )
+            {
+                panel_side.Height = btn_nhanvien.Height;
+                userControl_nhanvien1.BringToFront();
+                panel_side.Top = btn_nhanvien.Top;
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền vào đây");
+            }
         }
 
         private void btn_khachhang_Click(object sender, EventArgs e)

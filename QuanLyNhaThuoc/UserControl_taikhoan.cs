@@ -58,5 +58,10 @@ namespace QuanLyNhaThuoc
             nguoidung.changePass(f.nd.Tendangnhap, pass);
             txtpassword.Text = pass;
         }
+
+        private void lb_id_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,6 +63,24 @@
     <Compile Include="frm_insert_khachhang.Designer.cs">
       <DependentUpon>frm_insert_khachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_kho_insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kho_insert.Designer.cs">
+      <DependentUpon>frm_kho_insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_kho_thuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kho_thuoc.Designer.cs">
+      <DependentUpon>frm_kho_thuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nhacc_insert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nhacc_insert.Designer.cs">
+      <DependentUpon>frm_nhacc_insert.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_nhanvien_insert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,12 @@
     <Compile Include="UserControl_khachhang.Designer.cs">
       <DependentUpon>UserControl_khachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_kho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_kho.Designer.cs">
+      <DependentUpon>UserControl_kho.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_nhanvien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +166,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_insert_khachhang.resx">
       <DependentUpon>frm_insert_khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kho_insert.resx">
+      <DependentUpon>frm_kho_insert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_kho_thuoc.resx">
+      <DependentUpon>frm_kho_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nhacc_insert.resx">
+      <DependentUpon>frm_nhacc_insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_nhanvien_insert.resx">
       <DependentUpon>frm_nhanvien_insert.cs</DependentUpon>
@@ -179,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_khachhang.resx">
       <DependentUpon>UserControl_khachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_kho.resx">
+      <DependentUpon>UserControl_kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_nhanvien.resx">
       <DependentUpon>UserControl_nhanvien.cs</DependentUpon>

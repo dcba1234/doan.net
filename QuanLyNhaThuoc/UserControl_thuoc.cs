@@ -51,6 +51,7 @@ namespace QuanLyNhaThuoc
                 button1.Enabled = true;
                 button2.Enabled = true;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

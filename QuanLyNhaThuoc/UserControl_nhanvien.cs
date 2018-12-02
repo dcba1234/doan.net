@@ -30,6 +30,19 @@ namespace QuanLyNhaThuoc
         {
             tb = data_nv.select();
             dg_nhanvien.DataSource = tb;
+            if(dg_nhanvien.RowCount == 0)
+            {
+                btn_quyen.Enabled = false;
+                btn_sua.Enabled = false;
+                btn_xoa.Enabled = false;
+
+            }
+            else
+            {
+                btn_quyen.Enabled = true;
+                btn_sua.Enabled = true;
+                btn_xoa.Enabled = true;
+            }
 
         }
 
@@ -76,10 +89,20 @@ namespace QuanLyNhaThuoc
         {
             nhanvien n = new nhanvien();
             n.Manv = dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[0].Value.ToString().Trim();
-            if (dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim().Equals("Không có")) n.Manv = "#";
-            else n.Taikhoan = dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim();
-            data_nv.delete(n);
-            load();
+            int kq = data_nv.check(n.Manv);
+            if (kq == 0)
+            {
+                if (dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim().Equals("Không có")) n.Manv = "#";
+                else n.Taikhoan = dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim();
+                data_nv.delete(n);
+                load();
+            }
+            else
+            {
+                MessageBox.Show("Không thể xóa vì còn dữ liệu");
+            }
+           
+            
         }
     }
 }

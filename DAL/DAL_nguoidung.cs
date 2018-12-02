@@ -34,6 +34,7 @@ namespace DAL
             nd.Ten = tb.Rows[0]["tennv"].ToString();
             nd.Tendangnhap = tb.Rows[0]["id"].ToString();
             nd.Quyen = tb.Rows[0]["quyentruycap"].ToString(); 
+            nd.Manv = tb.Rows[0]["manv"].ToString();
             closeC();
             return nd;
         }

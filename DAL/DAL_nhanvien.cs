@@ -9,7 +9,8 @@ using Object;
 namespace DAL
 {
     public class DAL_nhanvien : DBConnect
-    {
+    {   
+
         public int dangNhap(string id, string pass)
         {
             openC();
@@ -21,6 +22,25 @@ namespace DAL
             closeC();
             return kq;
         }
+
+        public int check(string mnv)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("check_nhanvien", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@manv", mnv));
+            int kq = (int)cmd.ExecuteScalar();
+
+
+            cmd = new SqlCommand("check_nhanvien2", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@manv", mnv));
+            int kq2 = (int)cmd.ExecuteScalar();
+
+            closeC();
+            return kq+kq2;
+        }
+
         public void taotaikhoan(string id, string pass,string mnv, string quyen)
         {
             openC();
@@ -68,6 +88,21 @@ namespace DAL
             return tb;
 
         }
+
+        public DataTable select2(string mnv)
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_select_nhanvien2", con);
+            cmd.Parameters.Add(new SqlParameter("@maNV",mnv));
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+
+        }
+
         public void insert(nhanvien t)
         {
             openC();

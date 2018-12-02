@@ -12,7 +12,7 @@ namespace QuanLyNhaThuoc
 {
     public partial class frm_trangchu : Form
     {
-        private frm_dangNhap ff;
+        public frm_dangNhap ff;
         public nguoiDung nd = new nguoiDung();
         public string test = "sss";
         public frm_trangchu(frm_dangNhap f)
@@ -34,13 +34,14 @@ namespace QuanLyNhaThuoc
             panel_side.Top = btn_thuoc.Top;
             userControl_thuoc1.BringToFront();
             label2.Text = ff.nd.Ten;
+            
             //userControl_taikhoan1.nd = ff.nd;
             nd = ff.nd;
             userControl_taikhoan1.lb_id.Text = ff.nd.Tendangnhap;
             userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
             userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;
-
             
+
 
         }
         
@@ -118,7 +119,7 @@ namespace QuanLyNhaThuoc
             if (nd.Quyen.Trim() == "1" || nd.Quyen.Trim() == "3")
             {
                 panel_side.Height = btn_kho.Height;
-                userControl_banhang1.BringToFront();
+                userControl_kho1.BringToFront();
                 panel_side.Top = btn_kho.Top;
             }
             else
@@ -147,6 +148,11 @@ namespace QuanLyNhaThuoc
             panel_side.Height = btn_khachhang.Height;
             userControl_khachhang1.BringToFront();
             panel_side.Top = btn_khachhang.Top;
+        }
+
+        private void frm_trangchu_Shown(object sender, EventArgs e)
+        {
+
         }
     }
 }

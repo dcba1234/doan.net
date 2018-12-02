@@ -17,6 +17,15 @@ namespace BUS
             return lt.select();
 
         }
+        public int check(string ma)
+        {
+            return lt.checkmalo(ma);
+        }
+        public DataTable select2()
+        {
+            return lt.select2();
+
+        }
         public void insert(loThuoc l)
         {
             lt.insert(l);

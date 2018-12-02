@@ -37,16 +37,17 @@
             this.panel_side = new System.Windows.Forms.Panel();
             this.btn_thuoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userControl_nhanvien1 = new QuanLyNhaThuoc.UserControl_nhanvien();
-            this.userControl_khachhang1 = new QuanLyNhaThuoc.UserControl_khachhang();
-            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
-            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
-            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
+            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
+            this.userControl_nhanvien1 = new QuanLyNhaThuoc.UserControl_nhanvien();
+            this.userControl_kho1 = new QuanLyNhaThuoc.UserControl_kho();
+            this.userControl_khachhang1 = new QuanLyNhaThuoc.UserControl_khachhang();
+            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -174,49 +175,15 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.userControl_nhanvien1);
-            this.panel2.Controls.Add(this.userControl_khachhang1);
             this.panel2.Controls.Add(this.userControl_taikhoan1);
-            this.panel2.Controls.Add(this.userControl_banhang1);
             this.panel2.Controls.Add(this.userControl_thuoc1);
-            this.panel2.Location = new System.Drawing.Point(206, 88);
+            this.panel2.Controls.Add(this.userControl_banhang1);
+            this.panel2.Controls.Add(this.userControl_khachhang1);
+            this.panel2.Controls.Add(this.userControl_kho1);
+            this.panel2.Location = new System.Drawing.Point(206, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(957, 517);
+            this.panel2.Size = new System.Drawing.Size(990, 543);
             this.panel2.TabIndex = 4;
-            // 
-            // userControl_nhanvien1
-            // 
-            this.userControl_nhanvien1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_nhanvien1.Name = "userControl_nhanvien1";
-            this.userControl_nhanvien1.Size = new System.Drawing.Size(969, 500);
-            this.userControl_nhanvien1.TabIndex = 4;
-            // 
-            // userControl_khachhang1
-            // 
-            this.userControl_khachhang1.Location = new System.Drawing.Point(3, -4);
-            this.userControl_khachhang1.Name = "userControl_khachhang1";
-            this.userControl_khachhang1.Size = new System.Drawing.Size(886, 495);
-            this.userControl_khachhang1.TabIndex = 3;
-            // 
-            // userControl_taikhoan1
-            // 
-            this.userControl_taikhoan1.Location = new System.Drawing.Point(-3, 23);
-            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
-            this.userControl_taikhoan1.Size = new System.Drawing.Size(960, 491);
-            this.userControl_taikhoan1.TabIndex = 2;
-            // 
-            // userControl_banhang1
-            // 
-            this.userControl_banhang1.Location = new System.Drawing.Point(-3, -26);
-            this.userControl_banhang1.Name = "userControl_banhang1";
-            this.userControl_banhang1.Size = new System.Drawing.Size(990, 517);
-            this.userControl_banhang1.TabIndex = 1;
-            // 
-            // userControl_thuoc1
-            // 
-            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 0);
-            this.userControl_thuoc1.Name = "userControl_thuoc1";
-            this.userControl_thuoc1.Size = new System.Drawing.Size(987, 502);
-            this.userControl_thuoc1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -269,6 +236,48 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // userControl_thuoc1
+            // 
+            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 45);
+            this.userControl_thuoc1.Name = "userControl_thuoc1";
+            this.userControl_thuoc1.Size = new System.Drawing.Size(976, 495);
+            this.userControl_thuoc1.TabIndex = 0;
+            // 
+            // userControl_taikhoan1
+            // 
+            this.userControl_taikhoan1.Location = new System.Drawing.Point(-5, 45);
+            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
+            this.userControl_taikhoan1.Size = new System.Drawing.Size(992, 495);
+            this.userControl_taikhoan1.TabIndex = 1;
+            // 
+            // userControl_nhanvien1
+            // 
+            this.userControl_nhanvien1.Location = new System.Drawing.Point(-3, 23);
+            this.userControl_nhanvien1.Name = "userControl_nhanvien1";
+            this.userControl_nhanvien1.Size = new System.Drawing.Size(979, 517);
+            this.userControl_nhanvien1.TabIndex = 2;
+            // 
+            // userControl_kho1
+            // 
+            this.userControl_kho1.Location = new System.Drawing.Point(-3, 33);
+            this.userControl_kho1.Name = "userControl_kho1";
+            this.userControl_kho1.Size = new System.Drawing.Size(990, 507);
+            this.userControl_kho1.TabIndex = 3;
+            // 
+            // userControl_khachhang1
+            // 
+            this.userControl_khachhang1.Location = new System.Drawing.Point(-5, 33);
+            this.userControl_khachhang1.Name = "userControl_khachhang1";
+            this.userControl_khachhang1.Size = new System.Drawing.Size(981, 495);
+            this.userControl_khachhang1.TabIndex = 4;
+            // 
+            // userControl_banhang1
+            // 
+            this.userControl_banhang1.Location = new System.Drawing.Point(-5, 33);
+            this.userControl_banhang1.Name = "userControl_banhang1";
+            this.userControl_banhang1.Size = new System.Drawing.Size(981, 507);
+            this.userControl_banhang1.TabIndex = 5;
+            // 
             // frm_trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +295,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_trangchu";
             this.Load += new System.EventHandler(this.frm_trangchu_Load);
+            this.Shown += new System.EventHandler(this.frm_trangchu_Shown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -300,18 +310,19 @@
         private System.Windows.Forms.Panel panel_side;
         private System.Windows.Forms.Button btn_banhang;
         private System.Windows.Forms.Panel panel2;
-        private UserControl_thuoc userControl_thuoc1;
-        private UserControl_banhang userControl_banhang1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_nhanvien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_taikhoan;
-        private UserControl_taikhoan userControl_taikhoan1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_kho;
         private System.Windows.Forms.Button btn_khachhang;
+        private UserControl_banhang userControl_banhang1;
         private UserControl_khachhang userControl_khachhang1;
+        private UserControl_kho userControl_kho1;
         private UserControl_nhanvien userControl_nhanvien1;
+        private UserControl_taikhoan userControl_taikhoan1;
+        private UserControl_thuoc userControl_thuoc1;
+        public System.Windows.Forms.Label label2;
     }
 }

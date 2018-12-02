@@ -17,10 +17,22 @@ namespace BUS
 
             return nv.dangNhap(id,pass);
         }
+
+        public DataTable select2(string mnv)
+        {
+            
+            return nv.select2(mnv);
+
+        }
+
         public int check_id(string id)
         {
 
             return nv.check_id(id);
+        }
+        public int check(string ma)
+        {
+            return nv.check(ma);
         }
         public DataTable select()
         {       

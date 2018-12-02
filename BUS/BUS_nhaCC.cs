@@ -19,6 +19,10 @@ namespace BUS
             return ncc.select();
 
         }
+        public int check(string mnccc)
+        {
+            return ncc.check_mancc(mnccc);
+        }
         public void insert(nhaCC n)
         {
             ncc.insert(n);

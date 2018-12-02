@@ -10,6 +10,16 @@ namespace DAL
 {
     public class DAL_nhaCC : DBConnect
     {
+        public int check_mancc(string mancc)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("check_mancc", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@maNCC", mancc));
+            int kq = (int)cmd.ExecuteScalar();
+            closeC();
+            return kq;
+        }
         public DataTable select()
         {
             openC();

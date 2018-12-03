@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_solo = new System.Windows.Forms.TextBox();
             this.dg_ctiet = new System.Windows.Forms.DataGridView();
-            this.mathuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_them = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_mnv = new System.Windows.Forms.TextBox();
@@ -45,6 +41,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_ok = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_gia = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,10 +55,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txt_mathuoc = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
+            this.mathuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaysx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ctiet)).BeginInit();
@@ -102,27 +102,6 @@
             this.dg_ctiet.RowHeadersVisible = false;
             this.dg_ctiet.Size = new System.Drawing.Size(606, 287);
             this.dg_ctiet.TabIndex = 2;
-            // 
-            // mathuoc
-            // 
-            this.mathuoc.HeaderText = "Mã thuốc";
-            this.mathuoc.Name = "mathuoc";
-            this.mathuoc.ReadOnly = true;
-            // 
-            // tenthuoc
-            // 
-            this.tenthuoc.HeaderText = "Tên thuốc";
-            this.tenthuoc.Name = "tenthuoc";
-            // 
-            // soluong
-            // 
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            // 
-            // gia
-            // 
-            this.gia.HeaderText = "Giá";
-            this.gia.Name = "gia";
             // 
             // btn_them
             // 
@@ -231,6 +210,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm thuốc";
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(303, 153);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
+            this.dateTimePicker2.TabIndex = 26;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(226, 158);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Hạn sử dụng:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(108, 153);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
+            this.dateTimePicker1.TabIndex = 24;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 12, 2, 9, 45, 16, 0);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(16, 158);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Ngày sản xuất:";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -316,42 +332,26 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Mã thuốc:";
             // 
-            // label11
+            // mathuoc
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 158);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Ngày sản xuất:";
+            this.mathuoc.HeaderText = "Mã thuốc";
+            this.mathuoc.Name = "mathuoc";
+            this.mathuoc.ReadOnly = true;
             // 
-            // dateTimePicker1
+            // tenthuoc
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 153);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 24;
-            this.dateTimePicker1.Value = new System.DateTime(2018, 12, 2, 9, 45, 16, 0);
+            this.tenthuoc.HeaderText = "Tên thuốc";
+            this.tenthuoc.Name = "tenthuoc";
             // 
-            // dateTimePicker2
+            // soluong
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(303, 153);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker2.TabIndex = 26;
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
             // 
-            // label12
+            // gia
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(226, 158);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 13);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Hạn sử dụng:";
+            this.gia.HeaderText = "Giá nhập";
+            this.gia.Name = "gia";
             // 
             // ngaysx
             // 
@@ -421,14 +421,14 @@
         public System.Windows.Forms.TextBox txt_tenthuoc;
         public System.Windows.Forms.TextBox txt_mathuoc;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mathuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mathuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaysx;
         private System.Windows.Forms.DataGridViewTextBoxColumn hsd;
     }

@@ -17,6 +17,11 @@ namespace BUS
             return lt.select();
 
         }
+        public DataTable select_banra()
+        {
+            return lt.select_banra();
+
+        }
         public int check(string ma)
         {
             return lt.checkmalo(ma);

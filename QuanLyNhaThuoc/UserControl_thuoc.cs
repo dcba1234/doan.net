@@ -74,5 +74,11 @@ namespace QuanLyNhaThuoc
             if (!txttimkiem.Equals("")) dg_thuoc.DataSource = t.search(txttimkiem.Text);
             else dg_thuoc.DataSource = t.select();
         }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+            (dg_thuoc.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("[Tên thuốc] LIKE '{0}%' ", txttimkiem.Text);
+        }
     }
 }

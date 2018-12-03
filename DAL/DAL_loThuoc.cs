@@ -33,6 +33,18 @@ namespace DAL
             return tb;
 
         }
+        public DataTable select_banra()
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_select_lothuoc_Banra", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+
+        }
         public DataTable select2()
         {
             openC();

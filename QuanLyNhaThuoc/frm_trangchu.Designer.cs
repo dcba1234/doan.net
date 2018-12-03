@@ -42,12 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
-            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
-            this.userControl_nhanvien1 = new QuanLyNhaThuoc.UserControl_nhanvien();
-            this.userControl_kho1 = new QuanLyNhaThuoc.UserControl_kho();
-            this.userControl_khachhang1 = new QuanLyNhaThuoc.UserControl_khachhang();
             this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
+            this.userControl_nhanvien1 = new QuanLyNhaThuoc.UserControl_nhanvien();
+            this.userControl_khachhang1 = new QuanLyNhaThuoc.UserControl_khachhang();
+            this.userControl_kho1 = new QuanLyNhaThuoc.UserControl_kho();
+            this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
+            this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.btn_thuoc);
             this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 608);
+            this.panel1.Size = new System.Drawing.Size(203, 658);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -174,12 +174,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.userControl_nhanvien1);
-            this.panel2.Controls.Add(this.userControl_taikhoan1);
-            this.panel2.Controls.Add(this.userControl_thuoc1);
             this.panel2.Controls.Add(this.userControl_banhang1);
+            this.panel2.Controls.Add(this.userControl_nhanvien1);
             this.panel2.Controls.Add(this.userControl_khachhang1);
             this.panel2.Controls.Add(this.userControl_kho1);
+            this.panel2.Controls.Add(this.userControl_taikhoan1);
+            this.panel2.Controls.Add(this.userControl_thuoc1);
             this.panel2.Location = new System.Drawing.Point(206, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(990, 543);
@@ -236,19 +236,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // userControl_thuoc1
+            // userControl_banhang1
             // 
-            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 45);
-            this.userControl_thuoc1.Name = "userControl_thuoc1";
-            this.userControl_thuoc1.Size = new System.Drawing.Size(976, 495);
-            this.userControl_thuoc1.TabIndex = 0;
-            // 
-            // userControl_taikhoan1
-            // 
-            this.userControl_taikhoan1.Location = new System.Drawing.Point(-5, 45);
-            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
-            this.userControl_taikhoan1.Size = new System.Drawing.Size(992, 495);
-            this.userControl_taikhoan1.TabIndex = 1;
+            this.userControl_banhang1.Location = new System.Drawing.Point(0, 7);
+            this.userControl_banhang1.Name = "userControl_banhang1";
+            this.userControl_banhang1.Size = new System.Drawing.Size(981, 586);
+            this.userControl_banhang1.TabIndex = 5;
             // 
             // userControl_nhanvien1
             // 
@@ -257,13 +250,6 @@
             this.userControl_nhanvien1.Size = new System.Drawing.Size(979, 517);
             this.userControl_nhanvien1.TabIndex = 2;
             // 
-            // userControl_kho1
-            // 
-            this.userControl_kho1.Location = new System.Drawing.Point(-3, 33);
-            this.userControl_kho1.Name = "userControl_kho1";
-            this.userControl_kho1.Size = new System.Drawing.Size(990, 507);
-            this.userControl_kho1.TabIndex = 3;
-            // 
             // userControl_khachhang1
             // 
             this.userControl_khachhang1.Location = new System.Drawing.Point(-5, 33);
@@ -271,18 +257,32 @@
             this.userControl_khachhang1.Size = new System.Drawing.Size(981, 495);
             this.userControl_khachhang1.TabIndex = 4;
             // 
-            // userControl_banhang1
+            // userControl_kho1
             // 
-            this.userControl_banhang1.Location = new System.Drawing.Point(-5, 33);
-            this.userControl_banhang1.Name = "userControl_banhang1";
-            this.userControl_banhang1.Size = new System.Drawing.Size(981, 507);
-            this.userControl_banhang1.TabIndex = 5;
+            this.userControl_kho1.Location = new System.Drawing.Point(-3, 33);
+            this.userControl_kho1.Name = "userControl_kho1";
+            this.userControl_kho1.Size = new System.Drawing.Size(990, 507);
+            this.userControl_kho1.TabIndex = 3;
+            // 
+            // userControl_taikhoan1
+            // 
+            this.userControl_taikhoan1.Location = new System.Drawing.Point(-5, 7);
+            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
+            this.userControl_taikhoan1.Size = new System.Drawing.Size(992, 533);
+            this.userControl_taikhoan1.TabIndex = 1;
+            // 
+            // userControl_thuoc1
+            // 
+            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 7);
+            this.userControl_thuoc1.Name = "userControl_thuoc1";
+            this.userControl_thuoc1.Size = new System.Drawing.Size(976, 575);
+            this.userControl_thuoc1.TabIndex = 0;
             // 
             // frm_trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 602);
+            this.ClientSize = new System.Drawing.Size(1194, 656);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

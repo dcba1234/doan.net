@@ -40,11 +40,26 @@ namespace QuanLyNhaThuoc
             userControl_taikhoan1.lb_id.Text = ff.nd.Tendangnhap;
             userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
             userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;
-            
 
-
+            //  -------------------------------------------
+            /*  
+            List<khachHang> l = new List<khachHang>();
+            khachHang k = new khachHang();
+            khachHang k2 = new khachHang();
+            k.TenKH = "1";
+            k.MaKH = "mot";
+            l.Add(k);
+            k2.TenKH = "2";
+            k2.MaKH = "hai";
+            l.Add(k2);
+            comboBox1.DataSource = l;
+            comboBox1.DisplayMember = "Makh"; // Tên thuộc tính hiển thị
+            comboBox1.ValueMember = "TenKH"; // Giá trị mà nó nhận ví dụ chọn tên khách hàng trả về mã khách hàng
+            MessageBox.Show(comboBox1.SelectedValue.ToString());  // Lấy giá trị
+            //  -------------------------------------------
+             */
         }
-        
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -111,7 +126,8 @@ namespace QuanLyNhaThuoc
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         private void btn_kho_Click(object sender, EventArgs e)

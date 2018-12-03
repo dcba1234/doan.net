@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_chonthuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_chonthuoc.Designer.cs">
+      <DependentUpon>frm_chonthuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_dangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     <Compile Include="UserControl_thuoc.Designer.cs">
       <DependentUpon>UserControl_thuoc.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_chonthuoc.resx">
+      <DependentUpon>frm_chonthuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_dangNhap.resx">
       <DependentUpon>frm_dangNhap.cs</DependentUpon>
     </EmbeddedResource>

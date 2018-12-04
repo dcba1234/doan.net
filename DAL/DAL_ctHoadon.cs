@@ -10,11 +10,12 @@ namespace DAL
 {
     public class DAL_ctHoadon : DBConnect
     {
-        public DataTable select()
+        public DataTable select(string malo)
         {
             openC();
             DataTable tb = new DataTable();
             SqlCommand cmd = new SqlCommand("sp_select_ctHoadon", con);
+            cmd.Parameters.Add(new SqlParameter("@maHD", malo));
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(tb);
@@ -28,7 +29,7 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand("sp_insert_ctHoadon", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@maCTHD", ch.MaCTHD));
+            
             cmd.Parameters.Add(new SqlParameter("@maHD", ch.MaHD));
             cmd.Parameters.Add(new SqlParameter("@solothuoc", ch.Solothuoc));
             cmd.Parameters.Add(new SqlParameter("@mathuoc", ch.Mathuoc));
@@ -45,7 +46,7 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand("sp_update_ctHoadon", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@maCTHD", ch.MaCTHD));
+        
             cmd.Parameters.Add(new SqlParameter("@maHD", ch.MaHD));
             cmd.Parameters.Add(new SqlParameter("@solothuoc", ch.Solothuoc));
             cmd.Parameters.Add(new SqlParameter("@mathuoc", ch.Mathuoc));
@@ -62,7 +63,7 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand("sp_delete_ctHoadon", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@maCTHD", ch.MaCTHD));
+            
        
             cmd.ExecuteNonQuery();
 

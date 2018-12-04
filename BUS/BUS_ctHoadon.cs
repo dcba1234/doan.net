@@ -12,9 +12,9 @@ namespace BUS
     public class BUS_ctHoadon
     {
         DAL_ctHoadon cth = new DAL_ctHoadon();
-        public DataTable select()
+        public DataTable select(string malo)
         {
-            return cth.select();
+            return cth.select(malo);
 
         }
         public void insert(ctHoadon ch)

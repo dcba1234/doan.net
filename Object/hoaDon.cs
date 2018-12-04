@@ -12,7 +12,7 @@ namespace Object
         private string maKH;
         private string maNV;
         private string tongtien;
-
+        private string ngaynhap;
         public string MaHD
         {
             get
@@ -64,5 +64,7 @@ namespace Object
                 tongtien = value;
             }
         }
+
+        public string Ngaynhap { get => ngaynhap; set => ngaynhap = value; }
     }
 }

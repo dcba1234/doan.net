@@ -22,6 +22,17 @@ namespace DAL
             return tb;
 
         }
+        public int checkhoadon(string mhd)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("sp_check_mahoadon", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@maHD", mhd));
+
+            int kq = (int)cmd.ExecuteScalar();
+            closeC();
+            return kq;
+        }
         public void insert(hoaDon h)
         {
             openC();
@@ -31,6 +42,7 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@maHD", h.MaHD));
             cmd.Parameters.Add(new SqlParameter("@maKH", h.MaKH));
             cmd.Parameters.Add(new SqlParameter("@maNV", h.MaNV));
+            cmd.Parameters.Add(new SqlParameter("@ngaynhap", h.Ngaynhap));
             cmd.Parameters.Add(new SqlParameter("@tongtien", h.Tongtien));
 
             cmd.ExecuteNonQuery();

@@ -8,25 +8,14 @@ namespace Object
 {
     public class ctHoadon
     {
-        private string maCTHD;
+  
         private string maHD;
         private string solothuoc;
         private string mathuoc;
         private string soluong;
         private string dongia;
 
-        public string MaCTHD
-        {
-            get
-            {
-                return maCTHD;
-            }
-
-            set
-            {
-                maCTHD = value;
-            }
-        }
+      
 
         public string MaHD
         {

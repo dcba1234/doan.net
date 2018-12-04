@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_tenkh = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.txt_tien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_dongia = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.txt_solo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker_hsd = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +52,6 @@
             this.dateTimePicker_nsx = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_gia = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_soluong = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,11 +71,8 @@
             this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_lichsu = new System.Windows.Forms.Button();
-            this.txt_tenkh = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_gia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soluong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ctiet)).BeginInit();
             this.SuspendLayout();
@@ -102,6 +99,23 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
+            // 
+            // txt_tenkh
+            // 
+            this.txt_tenkh.Enabled = false;
+            this.txt_tenkh.Location = new System.Drawing.Point(127, 101);
+            this.txt_tenkh.Name = "txt_tenkh";
+            this.txt_tenkh.Size = new System.Drawing.Size(167, 20);
+            this.txt_tenkh.TabIndex = 40;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(27, 104);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 13);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Tên khách hàng:";
             // 
             // txt_tien
             // 
@@ -210,7 +224,6 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txt_dongia);
-            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txt_solo);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.dateTimePicker_hsd);
@@ -218,7 +231,6 @@
             this.groupBox2.Controls.Add(this.dateTimePicker_nsx);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txt_gia);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txt_soluong);
             this.groupBox2.Controls.Add(this.label8);
@@ -238,19 +250,10 @@
             // txt_dongia
             // 
             this.txt_dongia.Enabled = false;
-            this.txt_dongia.Location = new System.Drawing.Point(112, 165);
+            this.txt_dongia.Location = new System.Drawing.Point(192, 105);
             this.txt_dongia.Name = "txt_dongia";
-            this.txt_dongia.Size = new System.Drawing.Size(46, 20);
+            this.txt_dongia.Size = new System.Drawing.Size(83, 20);
             this.txt_dongia.TabIndex = 30;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(47, 168);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 13);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Đơn giá:";
             // 
             // txt_solo
             // 
@@ -309,24 +312,16 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(411, 106);
+            this.label10.Location = new System.Drawing.Point(281, 108);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 13);
             this.label10.TabIndex = 22;
             this.label10.Text = "vnđ";
             // 
-            // txt_gia
-            // 
-            this.txt_gia.Location = new System.Drawing.Point(229, 104);
-            this.txt_gia.Name = "txt_gia";
-            this.txt_gia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txt_gia.Size = new System.Drawing.Size(176, 20);
-            this.txt_gia.TabIndex = 21;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(197, 106);
+            this.label9.Location = new System.Drawing.Point(160, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 20;
@@ -420,8 +415,11 @@
             this.solo});
             this.dg_ctiet.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dg_ctiet.Location = new System.Drawing.Point(3, 273);
+            this.dg_ctiet.MultiSelect = false;
             this.dg_ctiet.Name = "dg_ctiet";
+            this.dg_ctiet.ReadOnly = true;
             this.dg_ctiet.RowHeadersVisible = false;
+            this.dg_ctiet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_ctiet.Size = new System.Drawing.Size(796, 259);
             this.dg_ctiet.TabIndex = 29;
             // 
@@ -485,23 +483,6 @@
             this.btn_lichsu.UseVisualStyleBackColor = true;
             this.btn_lichsu.Click += new System.EventHandler(this.btn_lichsu_Click);
             // 
-            // txt_tenkh
-            // 
-            this.txt_tenkh.Enabled = false;
-            this.txt_tenkh.Location = new System.Drawing.Point(127, 101);
-            this.txt_tenkh.Name = "txt_tenkh";
-            this.txt_tenkh.Size = new System.Drawing.Size(167, 20);
-            this.txt_tenkh.TabIndex = 40;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(27, 104);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 13);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "Tên khách hàng:";
-            // 
             // UserControl_banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,7 +499,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_gia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soluong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_ctiet)).EndInit();
             this.ResumeLayout(false);
@@ -543,7 +523,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown txt_gia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txt_tenthuoc;
@@ -567,7 +546,6 @@
         public System.Windows.Forms.DateTimePicker dateTimePicker_hsd;
         public System.Windows.Forms.DateTimePicker dateTimePicker_nsx;
         public System.Windows.Forms.TextBox txt_dongia;
-        private System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox txt_mnv;
         private System.Windows.Forms.Button btn_lichsu;
         public System.Windows.Forms.TextBox txt_tenkh;

@@ -49,10 +49,6 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@solothuoc", c.Solothuoc));
             cmd.Parameters.Add(new SqlParameter("@mathuoc", c.Mathuoc));
             cmd.Parameters.Add(new SqlParameter("@soluong", c.Soluong));
-            cmd.Parameters.Add(new SqlParameter("@ngaySX", c.NgaySX));
-            cmd.Parameters.Add(new SqlParameter("@hanSD", c.HanSD));
-            cmd.Parameters.Add(new SqlParameter("@gianhap", c.Gianhap));
-
             cmd.ExecuteNonQuery();
 
             closeC();

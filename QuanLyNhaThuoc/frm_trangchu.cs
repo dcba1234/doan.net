@@ -40,7 +40,7 @@ namespace QuanLyNhaThuoc
             userControl_taikhoan1.lb_id.Text = ff.nd.Tendangnhap;
             userControl_taikhoan1.lb_quyentruycap.Text = ff.nd.Quyen;
             userControl_taikhoan1.txtpassword.Text = "" + ff.nd.Matkhau;
-
+            userControl_banhang1.txt_mnv.Text = ff.nd.Manv;
             //  -------------------------------------------
             /*  
             List<khachHang> l = new List<khachHang>();

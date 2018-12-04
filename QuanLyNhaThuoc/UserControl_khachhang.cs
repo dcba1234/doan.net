@@ -137,5 +137,11 @@ namespace QuanLyNhaThuoc
             frm_xemanh f = new frm_xemanh(pathh);
             f.ShowDialog();
         }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+            (dg_khachhang.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("[Tên khách hàng] LIKE '{0}%' ", txttimkiem.Text);
+        }
     }
 }

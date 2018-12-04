@@ -63,5 +63,11 @@ namespace QuanLyNhaThuoc
             getData();
             this.Close();
         }
+
+        private void txttimkiem_TextChanged(object sender, EventArgs e)
+        {
+            (dg_kho.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("[Tên thuốc] LIKE '{0}%' ", txttimkiem.Text);
+        }
     }
 }

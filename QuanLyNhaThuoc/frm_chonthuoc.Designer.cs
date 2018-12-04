@@ -76,6 +76,7 @@
             this.txttimkiem.Name = "txttimkiem";
             this.txttimkiem.Size = new System.Drawing.Size(322, 20);
             this.txttimkiem.TabIndex = 22;
+            this.txttimkiem.TextChanged += new System.EventHandler(this.txttimkiem_TextChanged);
             // 
             // btn_them
             // 

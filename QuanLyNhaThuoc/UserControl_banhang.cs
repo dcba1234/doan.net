@@ -20,20 +20,7 @@ namespace QuanLyNhaThuoc
             txt_tien.Text = tongtien.ToString();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(checkBox1.Checked == true)
-            {
-                txt_makhachhang.Text = "";
-
-                btn_mkh.Enabled = false;
-            }
-            else
-            {
-                
-                btn_mkh.Enabled = true;
-            }
-        }
+       
 
         private void btn_thuoc_Click(object sender, EventArgs e)
         {
@@ -88,7 +75,10 @@ namespace QuanLyNhaThuoc
         }
         private void UserControl_banhang_Load(object sender, EventArgs e)
         {
-          //  txt_soluong.Maximum = soluongMax;
+            //  txt_soluong.Maximum = soluongMax;
+            txt_date.Text = DateTime.Today.ToString("MM/dd/yyyy");
+
+
         }
 
         private void txt_soluong_ValueChanged(object sender, EventArgs e)
@@ -100,6 +90,17 @@ namespace QuanLyNhaThuoc
         private void btn_ok_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_mkh_Click(object sender, EventArgs e)
+        {
+            frm_banhang_mnv f = new frm_banhang_mnv(this);
+            f.ShowDialog();
+        }
+
+        private void btn_lichsu_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

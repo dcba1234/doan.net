@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_banhang_mnv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_banhang_mnv.Designer.cs">
+      <DependentUpon>frm_banhang_mnv.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_chonthuoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="frm_kho_thuoc.Designer.cs">
       <DependentUpon>frm_kho_thuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_banhang_lichsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_banhang_lichsu.Designer.cs">
+      <DependentUpon>frm_banhang_lichsu.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_nhacc_insert.cs">
       <SubType>Form</SubType>
@@ -167,6 +179,9 @@
     <Compile Include="UserControl_thuoc.Designer.cs">
       <DependentUpon>UserControl_thuoc.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_banhang_mnv.resx">
+      <DependentUpon>frm_banhang_mnv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_chonthuoc.resx">
       <DependentUpon>frm_chonthuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_kho_thuoc.resx">
       <DependentUpon>frm_kho_thuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_banhang_lichsu.resx">
+      <DependentUpon>frm_banhang_lichsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_nhacc_insert.resx">
       <DependentUpon>frm_nhacc_insert.cs</DependentUpon>

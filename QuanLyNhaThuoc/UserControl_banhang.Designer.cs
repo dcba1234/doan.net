@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_tien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.txt_mahd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_dongia = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.txt_solo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker_hsd = new System.Windows.Forms.DateTimePicker();
@@ -69,8 +70,9 @@
             this.hsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ok = new System.Windows.Forms.Button();
-            this.txt_dongia = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.btn_lichsu = new System.Windows.Forms.Button();
+            this.txt_tenkh = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_gia)).BeginInit();
@@ -80,7 +82,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.txt_tenkh);
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.txt_tien);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -100,20 +103,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(127, 90);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(122, 17);
-            this.checkBox1.TabIndex = 39;
-            this.checkBox1.Text = "Không có mã khách";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // txt_tien
             // 
             this.txt_tien.Enabled = false;
-            this.txt_tien.Location = new System.Drawing.Point(127, 202);
+            this.txt_tien.Location = new System.Drawing.Point(127, 210);
             this.txt_tien.Name = "txt_tien";
             this.txt_tien.Size = new System.Drawing.Size(167, 20);
             this.txt_tien.TabIndex = 38;
@@ -121,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 205);
+            this.label5.Location = new System.Drawing.Point(50, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 37;
@@ -131,7 +124,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 181);
+            this.label4.Location = new System.Drawing.Point(28, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 12);
             this.label4.TabIndex = 36;
@@ -140,7 +133,7 @@
             // txt_date
             // 
             this.txt_date.Enabled = false;
-            this.txt_date.Location = new System.Drawing.Point(127, 165);
+            this.txt_date.Location = new System.Drawing.Point(127, 176);
             this.txt_date.Name = "txt_date";
             this.txt_date.Size = new System.Drawing.Size(167, 20);
             this.txt_date.TabIndex = 35;
@@ -148,7 +141,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 168);
+            this.label3.Location = new System.Drawing.Point(50, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 34;
@@ -157,7 +150,7 @@
             // txt_mnv
             // 
             this.txt_mnv.Enabled = false;
-            this.txt_mnv.Location = new System.Drawing.Point(127, 128);
+            this.txt_mnv.Location = new System.Drawing.Point(127, 144);
             this.txt_mnv.Name = "txt_mnv";
             this.txt_mnv.Size = new System.Drawing.Size(167, 20);
             this.txt_mnv.TabIndex = 33;
@@ -165,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 131);
+            this.label2.Location = new System.Drawing.Point(37, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 32;
@@ -173,12 +166,13 @@
             // 
             // btn_mkh
             // 
-            this.btn_mkh.Location = new System.Drawing.Point(300, 62);
+            this.btn_mkh.Location = new System.Drawing.Point(300, 61);
             this.btn_mkh.Name = "btn_mkh";
-            this.btn_mkh.Size = new System.Drawing.Size(75, 23);
+            this.btn_mkh.Size = new System.Drawing.Size(75, 24);
             this.btn_mkh.TabIndex = 31;
             this.btn_mkh.Text = "Chọn";
             this.btn_mkh.UseVisualStyleBackColor = true;
+            this.btn_mkh.Click += new System.EventHandler(this.btn_mkh_Click);
             // 
             // txt_makhachhang
             // 
@@ -240,6 +234,23 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm thuốc";
+            // 
+            // txt_dongia
+            // 
+            this.txt_dongia.Enabled = false;
+            this.txt_dongia.Location = new System.Drawing.Point(112, 165);
+            this.txt_dongia.Name = "txt_dongia";
+            this.txt_dongia.Size = new System.Drawing.Size(46, 20);
+            this.txt_dongia.TabIndex = 30;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(47, 168);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 13);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "Đơn giá:";
             // 
             // txt_solo
             // 
@@ -463,27 +474,39 @@
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
-            // txt_dongia
+            // btn_lichsu
             // 
-            this.txt_dongia.Enabled = false;
-            this.txt_dongia.Location = new System.Drawing.Point(112, 165);
-            this.txt_dongia.Name = "txt_dongia";
-            this.txt_dongia.Size = new System.Drawing.Size(46, 20);
-            this.txt_dongia.TabIndex = 30;
+            this.btn_lichsu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_lichsu.Location = new System.Drawing.Point(802, 317);
+            this.btn_lichsu.Name = "btn_lichsu";
+            this.btn_lichsu.Size = new System.Drawing.Size(145, 38);
+            this.btn_lichsu.TabIndex = 30;
+            this.btn_lichsu.Text = "Xem lịch sử";
+            this.btn_lichsu.UseVisualStyleBackColor = true;
+            this.btn_lichsu.Click += new System.EventHandler(this.btn_lichsu_Click);
             // 
-            // label15
+            // txt_tenkh
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(47, 168);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(47, 13);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Đơn giá:";
+            this.txt_tenkh.Enabled = false;
+            this.txt_tenkh.Location = new System.Drawing.Point(127, 101);
+            this.txt_tenkh.Name = "txt_tenkh";
+            this.txt_tenkh.Size = new System.Drawing.Size(167, 20);
+            this.txt_tenkh.TabIndex = 40;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(27, 104);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 13);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Tên khách hàng:";
             // 
             // UserControl_banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_lichsu);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.dg_ctiet);
             this.Controls.Add(this.groupBox2);
@@ -505,13 +528,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox txt_tien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_date;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_mnv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_mkh;
         public System.Windows.Forms.TextBox txt_makhachhang;
@@ -547,5 +568,9 @@
         public System.Windows.Forms.DateTimePicker dateTimePicker_nsx;
         public System.Windows.Forms.TextBox txt_dongia;
         private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox txt_mnv;
+        private System.Windows.Forms.Button btn_lichsu;
+        public System.Windows.Forms.TextBox txt_tenkh;
+        private System.Windows.Forms.Label label16;
     }
 }

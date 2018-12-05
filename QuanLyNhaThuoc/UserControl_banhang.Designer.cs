@@ -71,6 +71,8 @@
             this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_lichsu = new System.Windows.Forms.Button();
+            this.btn_hoadon = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soluong)).BeginInit();
@@ -433,16 +435,19 @@
             // 
             this.tenthuoc.HeaderText = "Tên thuốc";
             this.tenthuoc.Name = "tenthuoc";
+            this.tenthuoc.ReadOnly = true;
             // 
             // soluong
             // 
             this.soluong.HeaderText = "Số lượng";
             this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
             // 
             // gia
             // 
             this.gia.HeaderText = "Giá";
             this.gia.Name = "gia";
+            this.gia.ReadOnly = true;
             // 
             // ngaysx
             // 
@@ -460,6 +465,7 @@
             // 
             this.solo.HeaderText = "Số lô";
             this.solo.Name = "solo";
+            this.solo.ReadOnly = true;
             // 
             // btn_ok
             // 
@@ -468,14 +474,14 @@
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(145, 38);
             this.btn_ok.TabIndex = 27;
-            this.btn_ok.Text = "In hóa đơn";
+            this.btn_ok.Text = "Bán hàng";
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // btn_lichsu
             // 
             this.btn_lichsu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_lichsu.Location = new System.Drawing.Point(802, 317);
+            this.btn_lichsu.Location = new System.Drawing.Point(802, 361);
             this.btn_lichsu.Name = "btn_lichsu";
             this.btn_lichsu.Size = new System.Drawing.Size(145, 38);
             this.btn_lichsu.TabIndex = 30;
@@ -483,10 +489,35 @@
             this.btn_lichsu.UseVisualStyleBackColor = true;
             this.btn_lichsu.Click += new System.EventHandler(this.btn_lichsu_Click);
             // 
+            // btn_hoadon
+            // 
+            this.btn_hoadon.Enabled = false;
+            this.btn_hoadon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_hoadon.Location = new System.Drawing.Point(802, 317);
+            this.btn_hoadon.Name = "btn_hoadon";
+            this.btn_hoadon.Size = new System.Drawing.Size(145, 38);
+            this.btn_hoadon.TabIndex = 31;
+            this.btn_hoadon.Text = "In hóa đơn";
+            this.btn_hoadon.UseVisualStyleBackColor = true;
+            this.btn_hoadon.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(802, 405);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 38);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "Xóa đơn hàng";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UserControl_banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_hoadon);
             this.Controls.Add(this.btn_lichsu);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.dg_ctiet);
@@ -517,7 +548,6 @@
         private System.Windows.Forms.Button btn_mkh;
         public System.Windows.Forms.TextBox txt_makhachhang;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_mahd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label12;
@@ -550,5 +580,8 @@
         private System.Windows.Forms.Button btn_lichsu;
         public System.Windows.Forms.TextBox txt_tenkh;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btn_hoadon;
+        public System.Windows.Forms.TextBox txt_mahd;
+        private System.Windows.Forms.Button button2;
     }
 }

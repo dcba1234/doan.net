@@ -93,9 +93,9 @@ namespace QuanLyNhaThuoc
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (txt_mahd.Text.Trim().Equals(""))
+            if (txt_mahd.Text.Trim().Equals("") || txt_makhachhang.Text.Trim().Equals("")) 
             {
-                MessageBox.Show("Không để trống mã hóa đơn");
+                MessageBox.Show("Không để trống ");
             }
             else
             {   
@@ -113,10 +113,10 @@ namespace QuanLyNhaThuoc
                     }
                     else
                     { // do smt
-                        insertHoaDon();
-                        insertChiTietHoaDon();
-                        dg_ctiet.Rows.Clear();
-                        txt_mahd.Text = "";
+                      insertHoaDon();
+                      insertChiTietHoaDon();
+                      btn_hoadon.Enabled = true;
+                      MessageBox.Show("Thêm thành công");
                     }
                 }
                 
@@ -157,7 +157,7 @@ namespace QuanLyNhaThuoc
             c.Mathuoc = dg_ctiet.Rows[i].Cells[0].Value.ToString().Trim();
             c.Soluong = dg_ctiet.Rows[i].Cells[2].Value.ToString().Trim();
             c.Solothuoc = dg_ctiet.Rows[i].Cells[6].Value.ToString().Trim();
-            int i2 = 0;
+            
             return c;
         }
         private bool checkHoaDon()
@@ -182,12 +182,22 @@ namespace QuanLyNhaThuoc
         {
             frm_banhang_lichsu f = new frm_banhang_lichsu(this);
             f.ShowDialog();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            
-            
+            frm_InHoaDon f = new frm_InHoaDon(this);
+            f.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dg_ctiet.Rows.Clear();
+            txt_mahd.Text = "";
+            btn_hoadon.Enabled = false;
         }
     }
 }

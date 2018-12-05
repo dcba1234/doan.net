@@ -17,10 +17,11 @@ namespace QuanLyNhaThuoc
         private BUS_nhanvien nv = new BUS_nhanvien();
         public nguoiDung nd = new nguoiDung();
         private BUS_nguoidung data = new BUS_nguoidung();
+        
         public frm_dangNhap()
         {
             InitializeComponent();
-           
+            
             
 
         }
@@ -40,7 +41,9 @@ namespace QuanLyNhaThuoc
                 frm_trangchu f = new frm_trangchu(this);
                 nd = data.getData(txtid.Text);
                 nd.Matkhau = txtpassword.Text;
+                this.Hide();
                 f.ShowDialog();
+                
             }
            
         }

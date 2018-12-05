@@ -44,7 +44,11 @@ namespace QuanLyNhaThuoc
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
+            
             ((Form)this.TopLevelControl).Close();
+            frm_trangchu f = (frm_trangchu)this.Parent.Parent;
+            f.ff.Show();
+            
         }
 
         private void btn_luu_Click(object sender, EventArgs e)

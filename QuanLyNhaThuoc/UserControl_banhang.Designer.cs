@@ -73,6 +73,9 @@
             this.btn_lichsu = new System.Windows.Forms.Button();
             this.btn_hoadon = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txt_chidinh = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soluong)).BeginInit();
@@ -225,6 +228,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_chidinh);
+            this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txt_dongia);
             this.groupBox2.Controls.Add(this.txt_solo);
             this.groupBox2.Controls.Add(this.label14);
@@ -397,7 +402,7 @@
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(535, 38);
             this.btn_them.TabIndex = 3;
-            this.btn_them.Text = "Thêm vào giỏ";
+            this.btn_them.Text = "Thêm vào hóa đơn";
             this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
@@ -414,7 +419,8 @@
             this.gia,
             this.ngaysx,
             this.hsd,
-            this.solo});
+            this.solo,
+            this.a});
             this.dg_ctiet.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dg_ctiet.Location = new System.Drawing.Point(3, 273);
             this.dg_ctiet.MultiSelect = false;
@@ -512,6 +518,30 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // a
+            // 
+            this.a.HeaderText = "Thuốc theo chỉ định bs";
+            this.a.Name = "a";
+            this.a.ReadOnly = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(15, 163);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(149, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Theo chỉ định của đơn thuốc:";
+            // 
+            // txt_chidinh
+            // 
+            this.txt_chidinh.AutoSize = true;
+            this.txt_chidinh.Location = new System.Drawing.Point(163, 163);
+            this.txt_chidinh.Name = "txt_chidinh";
+            this.txt_chidinh.Size = new System.Drawing.Size(20, 13);
+            this.txt_chidinh.TabIndex = 32;
+            this.txt_chidinh.Text = "Có";
+            // 
             // UserControl_banhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,5 +613,8 @@
         private System.Windows.Forms.Button btn_hoadon;
         public System.Windows.Forms.TextBox txt_mahd;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn a;
+        public System.Windows.Forms.Label txt_chidinh;
+        private System.Windows.Forms.Label label15;
     }
 }

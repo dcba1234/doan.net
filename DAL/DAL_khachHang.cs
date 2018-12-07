@@ -23,6 +23,18 @@ namespace DAL
             return tb;
 
         }
+
+        public int check(string makh)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("sp_check_khachhang", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@makh", makh));
+            int kq = (int)cmd.ExecuteScalar();
+            closeC();
+            return kq;
+        }
+
         public void insert(khachHang k)
         {
             openC();
@@ -32,8 +44,8 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@maKH", k.MaKH));
             cmd.Parameters.Add(new SqlParameter("@tenKH", k.TenKH));
             cmd.Parameters.Add(new SqlParameter("@soDT", k.SoDT));
-            
-         
+            cmd.Parameters.Add(new SqlParameter("@diachi", k.SoDT));
+
             cmd.ExecuteNonQuery();
 
             closeC();
@@ -47,7 +59,7 @@ namespace DAL
             cmd.Parameters.Add(new SqlParameter("@maKH", k.MaKH));
             cmd.Parameters.Add(new SqlParameter("@tenKH", k.TenKH));
             cmd.Parameters.Add(new SqlParameter("@soDT", k.SoDT));
-            
+            cmd.Parameters.Add(new SqlParameter("@diachi", k.SoDT));
 
             cmd.ExecuteNonQuery();
 

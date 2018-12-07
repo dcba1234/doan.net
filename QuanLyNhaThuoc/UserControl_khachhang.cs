@@ -113,8 +113,12 @@ namespace QuanLyNhaThuoc
             k.MaKH = dg_khachhang.Rows[dg_khachhang.CurrentRow.Index].Cells[0].Value.ToString();
             if (dg_donthuoc.RowCount == 0)
             {
-                t.delete(k);
-                load();
+                if (t.check(k.MaKH) == 0)
+                {
+                    t.delete(k);
+                    load();
+                } else MessageBox.Show("Không thể xóa");
+
             }
             else MessageBox.Show("Không thể xóa");
         }

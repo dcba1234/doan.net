@@ -12,7 +12,7 @@ namespace Object
         private string tenKH;
         private string soDT;
         private string donthuoc;
-
+        private string diachi;
         public string MaKH
         {
             get
@@ -64,5 +64,7 @@ namespace Object
                 donthuoc = value;
             }
         }
+
+        public string Diachi { get => diachi; set => diachi = value; }
     }
 }

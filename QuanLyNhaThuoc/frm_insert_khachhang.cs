@@ -32,7 +32,11 @@ namespace QuanLyNhaThuoc
                     break;
                 case "update":
                     txt_mkh.Enabled = false;
-                    txt_mkh.Text = f.dg_khachhang.Rows[f.dg_khachhang.CurrentRow.Index].Cells[0].Value.ToString();
+                    txt_mkh.Text = f.dg_khachhang.Rows[f.dg_khachhang.CurrentRow.Index].Cells[0].Value.ToString().Trim();
+                    txt_tenkh.Text = f.dg_khachhang.Rows[f.dg_khachhang.CurrentRow.Index].Cells[1].Value.ToString().Trim();
+                    txtsdt.Text = f.dg_khachhang.Rows[f.dg_khachhang.CurrentRow.Index].Cells[2].Value.ToString().Trim();
+                    txt_diachi.Text = f.dg_khachhang.Rows[f.dg_khachhang.CurrentRow.Index].Cells[3].Value.ToString().Trim();
+
                     break;
             }
         }
@@ -42,13 +46,17 @@ namespace QuanLyNhaThuoc
             switch (f.button)
             {
                 case "insert":
-                    if (txt_mkh.Text != "")
-                    {
+                    if (txt_mkh.Text.Trim() != "")
+                    {   
                         if (!check(txt_mkh.Text))
-                        {   
-                            
-                            themdl();
-                            f.load_donthuoc();
+                        {
+                            if (txt_tenkh.Text.Trim() != "" && txt_diachi.Text.Trim() != "" && txtsdt.Text.Trim() != "")
+                            {
+                                themdl();
+                                f.load_donthuoc();
+                            }
+                            else MessageBox.Show("Không để trống");
+
                         }
                             
                         else MessageBox.Show("Đã tồn tại mã khách hàng");
@@ -76,6 +84,7 @@ namespace QuanLyNhaThuoc
                 t.MaKH = txt_mkh.Text.ToString();
                 t.TenKH = txt_tenkh.Text.ToString();
                 t.SoDT = txtsdt.Text.ToString();
+                t.Diachi = txt_diachi.Text;
                 khachhang.insert(t);
                 f.load();
                 this.Close();
@@ -86,6 +95,7 @@ namespace QuanLyNhaThuoc
                 t.MaKH = txt_mkh.Text.ToString();
                 t.TenKH = txt_tenkh.Text.ToString();
                 t.SoDT = txtsdt.Text.ToString();
+                t.Diachi = txt_diachi.Text;
                 khachhang.update(t);
                 f.load();
                 this.Close();

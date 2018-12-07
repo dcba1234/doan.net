@@ -18,6 +18,11 @@ namespace BUS
 
             return kh.select();
         }
+        public int check(string makh)
+        {
+
+            return kh.check(makh);
+        }
         public void insert(khachHang k)
         {
             kh.insert(k);

@@ -29,6 +29,8 @@ namespace QuanLyNhaThuoc
 
             f.txt_makhachhang.Text = userControl_khachhang1.dg_khachhang.Rows[userControl_khachhang1.dg_khachhang.CurrentRow.Index].Cells[0].Value.ToString();
             f.txt_tenkh.Text = userControl_khachhang1.dg_khachhang.Rows[userControl_khachhang1.dg_khachhang.CurrentRow.Index].Cells[1].Value.ToString();
+            f.sdt = userControl_khachhang1.dg_khachhang.Rows[userControl_khachhang1.dg_khachhang.CurrentRow.Index].Cells[2].Value.ToString();
+            f.diachi = userControl_khachhang1.dg_khachhang.Rows[userControl_khachhang1.dg_khachhang.CurrentRow.Index].Cells[3].Value.ToString();
         }
     }
 }

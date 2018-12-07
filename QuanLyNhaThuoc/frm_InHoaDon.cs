@@ -36,8 +36,8 @@ namespace QuanLyNhaThuoc
             reportParameters.Add(new ReportParameter("mahd", f.txt_mahd.Text));
             reportParameters.Add(new ReportParameter("tenkh", f.txt_tenkh.Text));
             reportParameters.Add(new ReportParameter("makh", f.txt_makhachhang.Text));
-            reportParameters.Add(new ReportParameter("sdt", "3434"));
-            reportParameters.Add(new ReportParameter("diachi", "Value"));
+            reportParameters.Add(new ReportParameter("sdt", f.sdt));
+            reportParameters.Add(new ReportParameter("diachi", f.diachi));
             this.reportViewer1.LocalReport.SetParameters(reportParameters);
             con.Close();
             this.reportViewer1.RefreshReport();

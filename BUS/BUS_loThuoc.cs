@@ -26,6 +26,10 @@ namespace BUS
         {
             return lt.checkmalo(ma);
         }
+        public int check2(string ma)
+        {
+            return lt.checkmalo2(ma);
+        }
         public DataTable select2()
         {
             return lt.select2();

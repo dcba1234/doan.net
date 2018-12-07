@@ -35,6 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.btn_ok = new System.Windows.Forms.Button();
+            this.txt_diachi = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -87,7 +89,7 @@
             // 
             // btn_ok
             // 
-            this.btn_ok.Location = new System.Drawing.Point(61, 170);
+            this.btn_ok.Location = new System.Drawing.Point(61, 255);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(288, 43);
             this.btn_ok.TabIndex = 6;
@@ -95,12 +97,31 @@
             this.btn_ok.UseVisualStyleBackColor = true;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
+            // txt_diachi
+            // 
+            this.txt_diachi.Location = new System.Drawing.Point(149, 147);
+            this.txt_diachi.Multiline = true;
+            this.txt_diachi.Name = "txt_diachi";
+            this.txt_diachi.Size = new System.Drawing.Size(200, 91);
+            this.txt_diachi.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(70, 150);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Địa chỉ:";
+            // 
             // frm_insert_khachhang
             // 
             this.AcceptButton = this.btn_ok;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 225);
+            this.ClientSize = new System.Drawing.Size(418, 361);
+            this.Controls.Add(this.txt_diachi);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.txtsdt);
             this.Controls.Add(this.label3);
@@ -126,5 +147,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtsdt;
         private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.TextBox txt_diachi;
+        private System.Windows.Forms.Label label4;
     }
 }

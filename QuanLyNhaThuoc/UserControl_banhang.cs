@@ -18,6 +18,7 @@ namespace QuanLyNhaThuoc
         BUS_hoaDon hoadon = new BUS_hoaDon();
         BUS_ctHoadon cthoadon = new BUS_ctHoadon();
         BUS_ctLothuoc lothuoc = new BUS_ctLothuoc();
+        public string sdt, diachi;
         public UserControl_banhang()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace QuanLyNhaThuoc
                 {
                     if (!check(txt_mathuoc.Text,txt_solo.Text))
                     {
-                        this.dg_ctiet.Rows.Add(txt_mathuoc.Text, txt_tenthuoc.Text, txt_soluong.Value, txt_dongia.Text, dateTimePicker_nsx.Value.ToString("MM/dd/yyyy"), dateTimePicker_hsd.Value.ToString("MM/dd/yyyy"), txt_solo.Text);
+                        this.dg_ctiet.Rows.Add(txt_mathuoc.Text, txt_tenthuoc.Text, txt_soluong.Value, txt_dongia.Text, dateTimePicker_nsx.Value.ToString("MM/dd/yyyy"), dateTimePicker_hsd.Value.ToString("MM/dd/yyyy"), txt_solo.Text,txt_chidinh.Text);
                         int dongia = Int32.Parse(txt_dongia.Text);
                         tongtien += dongia * (int)txt_soluong.Value;
                         txt_tien.Text = tongtien.ToString();

@@ -151,18 +151,24 @@ namespace QuanLyNhaThuoc
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn xóa toàn bộ lô thuốc này?", "Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                loThuoc l = new loThuoc();
-                l.Solothuoc = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[0].Value.ToString();
-                lothuoc.delete(l);
+                if (lothuoc.check2(dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[0].Value.ToString()) == 0)
+                {
+                    loThuoc l = new loThuoc();
+                    l.Solothuoc = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[0].Value.ToString();
+                    lothuoc.delete(l);
 
-                if (comboBox1.Text == "Thuốc")
-                {
-                    load_kho();
+                    if (comboBox1.Text == "Thuốc")
+                    {
+                        load_kho();
+                    }
+                    else
+                    {
+                        load_kho2();
+                    }
                 }
-                else
-                {
-                    load_kho2();
-                }
+                else MessageBox.Show("Không thể xóa");
+
+
             }
             else if (dialogResult == DialogResult.No)
             {

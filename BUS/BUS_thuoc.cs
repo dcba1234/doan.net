@@ -35,5 +35,9 @@ namespace BUS
         {
             thuoc.delete(t);
         }
+        public int check(string mathuoc)
+        {
+            return thuoc.check(mathuoc);
+        }
     }
 }

@@ -63,10 +63,19 @@ namespace QuanLyNhaThuoc
 
         private void button2_Click(object sender, EventArgs e)
         {      
+            
             thuoc t = new thuoc();
             t.Mathuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[0].Value.ToString();
-            this.t.delete(t);
-            load();
+            if (this.t.check(t.Mathuoc.Trim()) == 0)
+            {
+                this.t.delete(t);
+                load();
+            }
+            else
+            {
+                MessageBox.Show("Còn dữ liệu, không thể xóa");
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

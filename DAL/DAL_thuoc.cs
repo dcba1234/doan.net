@@ -36,6 +36,19 @@ namespace DAL
             return tb;
 
         }
+
+        public int check(string mathuoc)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("sp_check_mathuoc_ctlo", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@mathuoc", mathuoc));
+           
+            int kq = (int)cmd.ExecuteScalar();
+            closeC();
+            return kq;
+        }
+
         public void insert(thuoc t)
         {
             openC();

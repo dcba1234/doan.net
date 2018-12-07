@@ -33,6 +33,19 @@ namespace DAL
             return tb;
 
         }
+
+        public int checkmalo2(string ma)
+        {
+            openC();
+            SqlCommand cmd = new SqlCommand("check_solothuoc2", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@solothuoc", ma));
+
+            int kq = (int)cmd.ExecuteScalar();
+            closeC();
+            return kq;
+        }
+
         public DataTable select_banra()
         {
             openC();
@@ -99,7 +112,7 @@ namespace DAL
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@solothuoc", l.Solothuoc));
 
-            //cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
 
             closeC();
         }

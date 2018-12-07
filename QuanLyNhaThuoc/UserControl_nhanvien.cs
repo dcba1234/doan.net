@@ -92,7 +92,7 @@ namespace QuanLyNhaThuoc
             int kq = data_nv.check(n.Manv);
             if (kq == 0)
             {
-                if (dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim().Equals("Không có")) n.Manv = "#";
+                if (dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim().Equals("Không có")) n.Taikhoan = "#";
                 else n.Taikhoan = dg_nhanvien.Rows[dg_nhanvien.CurrentRow.Index].Cells[4].Value.ToString().Trim();
                 data_nv.delete(n);
                 load();

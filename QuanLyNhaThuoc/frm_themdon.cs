@@ -25,9 +25,7 @@ namespace QuanLyNhaThuoc
         private void btn_anh_Click(object sender, EventArgs e)
         {
            // openFileDialog1.ShowDialog();
-          //  openFileDialog1.Filter = "bmp files (*.bmp)|*.bmp";
-            
-            
+          //  openFileDialog1.Filter = "bmp files (*.bmp)|*.bmp";     
    
            // if (string.IsNullOrEmpty(file) || file.Equals("openFileDialog1")) return;
             //Image img = Image.FromFile(file);

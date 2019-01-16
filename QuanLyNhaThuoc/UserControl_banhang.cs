@@ -146,7 +146,7 @@ namespace QuanLyNhaThuoc
         {
             ctHoadon hd = new ctHoadon();
             hd.MaHD = txt_mahd.Text;
-            hd.Solothuoc = dg_ctiet.Rows[i].Cells[6].Value.ToString().Trim();
+            hd.Solothuoc = dg_ctiet.Rows[i].Cells[6].Value.ToString().Trim(); 
             hd.Soluong = dg_ctiet.Rows[i].Cells[2].Value.ToString().Trim();
             hd.Dongia = dg_ctiet.Rows[i].Cells[3].Value.ToString().Trim();
             hd.Mathuoc = dg_ctiet.Rows[i].Cells[0].Value.ToString().Trim();

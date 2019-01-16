@@ -44,6 +44,8 @@
             this.txt_mahd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_chidinh = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.txt_dongia = new System.Windows.Forms.TextBox();
             this.txt_solo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,13 +71,11 @@
             this.ngaysx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hsd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_lichsu = new System.Windows.Forms.Button();
             this.btn_hoadon = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt_chidinh = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soluong)).BeginInit();
@@ -253,6 +253,24 @@
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thêm thuốc";
+            // 
+            // txt_chidinh
+            // 
+            this.txt_chidinh.AutoSize = true;
+            this.txt_chidinh.Location = new System.Drawing.Point(163, 163);
+            this.txt_chidinh.Name = "txt_chidinh";
+            this.txt_chidinh.Size = new System.Drawing.Size(20, 13);
+            this.txt_chidinh.TabIndex = 32;
+            this.txt_chidinh.Text = "Có";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(15, 163);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(149, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Theo chỉ định của đơn thuốc:";
             // 
             // txt_dongia
             // 
@@ -473,6 +491,12 @@
             this.solo.Name = "solo";
             this.solo.ReadOnly = true;
             // 
+            // a
+            // 
+            this.a.HeaderText = "Thuốc theo chỉ định bs";
+            this.a.Name = "a";
+            this.a.ReadOnly = true;
+            // 
             // btn_ok
             // 
             this.btn_ok.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -517,30 +541,6 @@
             this.button2.Text = "Xóa đơn hàng";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // a
-            // 
-            this.a.HeaderText = "Thuốc theo chỉ định bs";
-            this.a.Name = "a";
-            this.a.ReadOnly = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 163);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(149, 13);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Theo chỉ định của đơn thuốc:";
-            // 
-            // txt_chidinh
-            // 
-            this.txt_chidinh.AutoSize = true;
-            this.txt_chidinh.Location = new System.Drawing.Point(163, 163);
-            this.txt_chidinh.Name = "txt_chidinh";
-            this.txt_chidinh.Size = new System.Drawing.Size(20, 13);
-            this.txt_chidinh.TabIndex = 32;
-            this.txt_chidinh.Text = "Có";
             // 
             // UserControl_banhang
             // 

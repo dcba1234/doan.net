@@ -62,19 +62,27 @@ namespace QuanLyNhaThuoc
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {      
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn xóa thuốc?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                thuoc t = new thuoc();
+                t.Mathuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[0].Value.ToString();
+                if (this.t.check(t.Mathuoc.Trim()) == 0)
+                {
+                    this.t.delete(t);
+                    load();
+                }
+                else
+                {
+                    MessageBox.Show("Còn dữ liệu, không thể xóa");
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
             
-            thuoc t = new thuoc();
-            t.Mathuoc = dg_thuoc.Rows[dg_thuoc.CurrentRow.Index].Cells[0].Value.ToString();
-            if (this.t.check(t.Mathuoc.Trim()) == 0)
-            {
-                this.t.delete(t);
-                load();
-            }
-            else
-            {
-                MessageBox.Show("Còn dữ liệu, không thể xóa");
-            }
             
         }
 

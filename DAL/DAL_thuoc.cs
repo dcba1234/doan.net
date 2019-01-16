@@ -55,7 +55,7 @@ namespace DAL
            
             SqlCommand cmd = new SqlCommand("sp_insert_thuoc", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@mathuoc", t.Mathuoc));
+           // cmd.Parameters.Add(new SqlParameter("@mathuoc", t.Mathuoc));
             cmd.Parameters.Add(new SqlParameter("@tenthuoc", t.Tenthuoc));
             cmd.Parameters.Add(new SqlParameter("@Loaithuoc", t.Loaithuoc));
             cmd.Parameters.Add(new SqlParameter("@Congdung", t.Congdung));

@@ -42,7 +42,7 @@ namespace QuanLyNhaThuoc
             switch (f.button)
             {
                 case "insert":
-                    txt_mathuoc.Enabled = true;
+                    txt_mathuoc.Enabled = false;
                     break;
                 case "update":
                     string hsd = f.dg_thuoc.Rows[f.dg_thuoc.CurrentRow.Index].Cells[5].Value.ToString();
@@ -79,6 +79,8 @@ namespace QuanLyNhaThuoc
         {   
             switch (f.button){
                 case "insert":
+                    themdl();
+                    /*
                     if(txt_mathuoc.Text != "") {
                         if (!check(txt_mathuoc.Text))
                             themdl();
@@ -87,10 +89,10 @@ namespace QuanLyNhaThuoc
                     else
                     {
                         MessageBox.Show("Không để trống mã thuốc");
-                    }
-                    
-                   
-                    
+                    }  */
+
+
+
                     break;
                 case "update":
                     
@@ -104,7 +106,7 @@ namespace QuanLyNhaThuoc
         private void themdl()
         {
             thuoc t = new thuoc();
-            t.Mathuoc = txt_mathuoc.Text.ToString();
+           // t.Mathuoc = txt_mathuoc.Text.ToString();
             t.Tenthuoc = txt_tenthuoc.Text.ToString();
             t.Loaithuoc = txt_loaithuoc.Text.ToString();
             t.Congdung = txt_congdung.Text.ToString();

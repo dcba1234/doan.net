@@ -57,6 +57,7 @@
             // 
             // txt_mathuoc
             // 
+            this.txt_mathuoc.Enabled = false;
             this.txt_mathuoc.Location = new System.Drawing.Point(140, 71);
             this.txt_mathuoc.Name = "txt_mathuoc";
             this.txt_mathuoc.Size = new System.Drawing.Size(234, 20);

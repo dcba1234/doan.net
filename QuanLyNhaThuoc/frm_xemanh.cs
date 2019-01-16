@@ -15,11 +15,19 @@ namespace QuanLyNhaThuoc
         public frm_xemanh(string path)
         {
             InitializeComponent();
-            Image img = Image.FromFile(path);
-            //
-            pictureBox1.Image = img;
-          //  this.Size = pictureBox1.Size;
-            this.Size = new System.Drawing.Size(img.Width+25, img.Height+40);
+            try
+            {
+                Image img = Image.FromFile(path);
+                //
+                pictureBox1.Image = img;
+                //  this.Size = pictureBox1.Size;
+                this.Size = new System.Drawing.Size(img.Width + 25, img.Height + 40);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Không tìm thấy ảnh");
+            }
+            
         }
 
         private void frm_xemanh_Load(object sender, EventArgs e)

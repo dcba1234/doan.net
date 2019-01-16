@@ -52,7 +52,7 @@ namespace QuanLyNhaThuoc
             f.txt_dongia.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[9].Value.ToString();
             string[] date = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[4].Value.ToString().Split(' ');
             string[] date2 = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[5].Value.ToString().Split(' ');
-            f.txt_chidinh.Text = f.txt_mathuoc.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[10].Value.ToString().Trim();
+            f.txt_chidinh.Text  = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[10].Value.ToString().Trim();
             // MessageBox.Show(date[0]);
             f.dateTimePicker_nsx.Value = DateTime.Parse(date[0]);
             f.dateTimePicker_hsd.Value = DateTime.Parse(date2[0]);

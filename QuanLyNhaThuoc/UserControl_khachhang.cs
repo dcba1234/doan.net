@@ -138,6 +138,7 @@ namespace QuanLyNhaThuoc
         {   
 
             string pathh = dg_donthuoc.Rows[dg_donthuoc.CurrentRow.Index].Cells[4].Value.ToString();
+
             frm_xemanh f = new frm_xemanh(pathh);
             f.ShowDialog();
         }

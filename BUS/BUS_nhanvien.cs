@@ -14,8 +14,8 @@ namespace BUS
         private DAL_nhanvien nv = new DAL_nhanvien();
         public int dangNhap(string id, string pass)
         {
-
-            return nv.dangNhap(id,pass);
+            string a = CreateMD5(pass);
+            return nv.dangNhap(id, CreateMD5(pass));//
         }
 
         public DataTable select2(string mnv)
@@ -52,13 +52,31 @@ namespace BUS
         }
         public void taotaikhoan(string id, string pass, string mnv, string quyen)
         {
-            nv.taotaikhoan( id,  pass,  mnv,  quyen);
+            
+            nv.taotaikhoan( id, CreateMD5(pass),  mnv,  quyen);
         }
 
         public void capquyentaikhoan(string id, string quyen)
         {
             nv.capquyentaikhoan(id, quyen);
 
+        }
+        public static string CreateMD5(string input)
+        {
+            // Use input string to calculate MD5 hash
+            using (System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create())
+            {
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+                byte[] hashBytes = md5.ComputeHash(inputBytes);
+
+                // Convert the byte array to hexadecimal string
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < hashBytes.Length; i++)
+                {
+                    sb.Append(hashBytes[i].ToString("X2"));
+                }
+                return sb.ToString();
+            }
         }
     }
 }

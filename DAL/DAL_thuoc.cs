@@ -23,6 +23,17 @@ namespace DAL
             return tb;
             
         }
+        public int getSothuoc()
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("select max(mathuoc) from thuoc", con);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            int i = (int)cmd.ExecuteScalar();
+            closeC();
+            return i+1;
+        }
+
         public DataTable search(string ten)
         {
             openC();

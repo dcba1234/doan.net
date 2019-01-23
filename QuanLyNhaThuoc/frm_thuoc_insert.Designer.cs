@@ -130,6 +130,11 @@
             this.txt_hsd.Name = "txt_hsd";
             this.txt_hsd.Size = new System.Drawing.Size(80, 20);
             this.txt_hsd.TabIndex = 10;
+            this.txt_hsd.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cb_hsd
             // 

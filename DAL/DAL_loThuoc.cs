@@ -58,6 +58,31 @@ namespace DAL
             return tb;
 
         }
+        public DataTable select_banra1()
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_select_banra1", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+
+        }
+        public DataTable select_banra2(string mathuoc)
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("sp_select_banra2", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@mathuoc",mathuoc));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+
+        }
         public DataTable select2()
         {
             openC();

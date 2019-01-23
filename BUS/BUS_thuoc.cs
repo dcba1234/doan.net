@@ -18,6 +18,10 @@ namespace BUS
             
             return thuoc.select();
         }
+        public int getSothuoc()
+        {
+            return thuoc.getSothuoc();
+        }
         public DataTable search(string ten)
         {
 

@@ -42,7 +42,9 @@ namespace QuanLyNhaThuoc
             switch (f.button)
             {
                 case "insert":
+                   
                     txt_mathuoc.Enabled = false;
+                    txt_mathuoc.Text = thuoc.getSothuoc().ToString();
                     break;
                 case "update":
                     string hsd = f.dg_thuoc.Rows[f.dg_thuoc.CurrentRow.Index].Cells[5].Value.ToString();

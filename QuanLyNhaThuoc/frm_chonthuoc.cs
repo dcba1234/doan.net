@@ -38,21 +38,26 @@ namespace QuanLyNhaThuoc
         public void load_kho()
         {
            
-            dg_kho.DataSource = lothuoc.select_banra();
-
+            dg_kho.DataSource = lothuoc.select_banra1();
+            if(dg_kho.RowCount != 0)
+            {
+                dataGridView1.DataSource = lothuoc.select_banra2(dg_kho.Rows[0].Cells[0].Value.ToString());
+            }
+            
+           // MessageBox.Show(dg_kho.Rows[0].Cells[0].Value.ToString());
         }
 
         public void getData()
         {
 
-            f.txt_mathuoc.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[1].Value.ToString();
-            f.txt_solo.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[0].Value.ToString();
-            f.txt_tenthuoc.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[2].Value.ToString();
-            f.txt_soluong.Maximum = Int32.Parse(dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[3].Value.ToString());
-            f.txt_dongia.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[9].Value.ToString();
-            string[] date = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[4].Value.ToString().Split(' ');
-            string[] date2 = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[5].Value.ToString().Split(' ');
-            f.txt_chidinh.Text  = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[10].Value.ToString().Trim();
+            f.txt_mathuoc.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[0].Value.ToString();
+            f.txt_solo.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            f.txt_tenthuoc.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[1].Value.ToString();
+            f.txt_soluong.Maximum = Int32.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[1].Value.ToString());
+            f.txt_dongia.Text = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[3].Value.ToString();
+            string[] date = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[2].Value.ToString().Split(' ');
+            string[] date2 = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[3].Value.ToString().Split(' ');
+            f.txt_chidinh.Text  = dg_kho.Rows[dg_kho.CurrentRow.Index].Cells[2].Value.ToString().Trim();
             // MessageBox.Show(date[0]);
             f.dateTimePicker_nsx.Value = DateTime.Parse(date[0]);
             f.dateTimePicker_hsd.Value = DateTime.Parse(date2[0]);
@@ -69,6 +74,21 @@ namespace QuanLyNhaThuoc
         {
             (dg_kho.DataSource as DataTable).DefaultView.RowFilter =
             string.Format("[Tên thuốc] LIKE '{0}%' ", txttimkiem.Text);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dg_kho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void dg_kho_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.DataSource = lothuoc.select_banra2(dg_kho.CurrentRow.Cells[0].Value.ToString());
         }
     }
 }

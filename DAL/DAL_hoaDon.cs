@@ -22,6 +22,16 @@ namespace DAL
             return tb;
 
         }
+        public int getSoHoaDon()
+        {
+            openC();
+            DataTable tb = new DataTable();
+            SqlCommand cmd = new SqlCommand("select max(mahd) from hoadon", con);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            int i = (int)cmd.ExecuteScalar();
+            closeC();
+            return i ;
+        }
         public int checkhoadon(string mhd)
         {
             openC();
@@ -39,7 +49,7 @@ namespace DAL
 
             SqlCommand cmd = new SqlCommand("sp_insert_hoaDon", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("@maHD", h.MaHD));
+            //cmd.Parameters.Add(new SqlParameter("@maHD", h.MaHD));
             cmd.Parameters.Add(new SqlParameter("@maKH", h.MaKH));
             cmd.Parameters.Add(new SqlParameter("@maNV", h.MaNV));
             cmd.Parameters.Add(new SqlParameter("@ngaynhap", h.Ngaynhap));

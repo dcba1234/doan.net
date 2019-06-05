@@ -17,6 +17,10 @@ namespace BUS
             return hd.select();
 
         }
+        public int getSoHoaDon()
+        {
+            return hd.getSoHoaDon();
+        }
         public int checkhoadon(string mhd)
         {
             return hd.checkhoadon(mhd);

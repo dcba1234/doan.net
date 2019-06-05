@@ -94,7 +94,7 @@ namespace QuanLyNhaThuoc
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (txt_mahd.Text.Trim().Equals("") || txt_makhachhang.Text.Trim().Equals("")) 
+            if ( txt_makhachhang.Text.Trim().Equals("")) 
             {
                 MessageBox.Show("Không để trống ");
             }
@@ -107,18 +107,12 @@ namespace QuanLyNhaThuoc
                 else
                 {
                   
-                    if (checkHoaDon())
-                    {
-                        MessageBox.Show("Đã tồn tại mã hóa đơn");
-                        txt_mahd.Focus();
-                    }
-                    else
-                    { // do smt
+                    
                       insertHoaDon();
                       insertChiTietHoaDon();
                       btn_hoadon.Enabled = true;
                       MessageBox.Show("Thêm thành công");
-                    }
+                    
                 }
                 
             }
@@ -127,7 +121,7 @@ namespace QuanLyNhaThuoc
         private void insertHoaDon()
         {
             hoaDon hd = new hoaDon();
-            hd.MaHD = txt_mahd.Text;
+           
             hd.MaKH = txt_makhachhang.Text;
             hd.MaNV = txt_mnv.Text;
             hd.Tongtien = txt_tien.Text;
@@ -136,16 +130,17 @@ namespace QuanLyNhaThuoc
         }
         private void insertChiTietHoaDon()
         {
-            for(int i = 0;i < dg_ctiet.RowCount; i++)
+            int mhd_add = hoadon.getSoHoaDon();
+            for (int i = 0;i < dg_ctiet.RowCount; i++)
             {
-                cthoadon.insert(getChiTietHoaDon(i));
+                cthoadon.insert(getChiTietHoaDon(i,mhd_add));
                 lothuoc.update(getLothuocupdate(i));
             }
         }
-        private ctHoadon getChiTietHoaDon(int i)
+        private ctHoadon getChiTietHoaDon(int i,int mhd)
         {
             ctHoadon hd = new ctHoadon();
-            hd.MaHD = txt_mahd.Text;
+            hd.MaHD = mhd.ToString();
             hd.Solothuoc = dg_ctiet.Rows[i].Cells[6].Value.ToString().Trim(); 
             hd.Soluong = dg_ctiet.Rows[i].Cells[2].Value.ToString().Trim();
             hd.Dongia = dg_ctiet.Rows[i].Cells[3].Value.ToString().Trim();
@@ -161,16 +156,7 @@ namespace QuanLyNhaThuoc
             
             return c;
         }
-        private bool checkHoaDon()
-        {
-            bool check = false;// false = không tồn tại
-            if(hoadon.checkhoadon(txt_mahd.Text.Trim()) != 0)
-            {
-                return true;
-            }
-
-            return check;
-        }
+        
 
 
         private void btn_mkh_Click(object sender, EventArgs e)
@@ -190,14 +176,14 @@ namespace QuanLyNhaThuoc
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frm_InHoaDon f = new frm_InHoaDon(this);
+            frm_InHoaDon f = new frm_InHoaDon(this, hoadon.getSoHoaDon().ToString());
             f.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             dg_ctiet.Rows.Clear();
-            txt_mahd.Text = "";
+            
             btn_hoadon.Enabled = false;
         }
     }

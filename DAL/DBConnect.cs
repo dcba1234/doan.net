@@ -9,8 +9,8 @@ namespace DAL
 {
     public class DBConnect
     {
-        protected SqlConnection con = new SqlConnection(@"Data Source = (local); Initial Catalog = Quan ly nha thuoc c#; Integrated Security = True");
-        public void openC()
+        protected static SqlConnection con = new SqlConnection(@"Data Source = (local); Initial Catalog = Quan ly nha thuoc c#; Integrated Security = True");
+        public static void openC()
         {
             try
             {
@@ -21,7 +21,7 @@ namespace DAL
                 Console.WriteLine(e);
             }
         }
-        public void closeC()
+        public static void closeC()
         {
             try
             {

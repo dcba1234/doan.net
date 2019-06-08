@@ -141,6 +141,21 @@ namespace DAL
 
             closeC();
         }
+
+        public DataTable getReport()
+        {
+            openC();
+            DataTable tb = new DataTable(); ;
+            SqlCommand cmd = new SqlCommand("sp_report", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(tb);
+            closeC();
+            return tb;
+        }
+
+
     }
 
 }

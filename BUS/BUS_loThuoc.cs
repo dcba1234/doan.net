@@ -22,6 +22,11 @@ namespace BUS
             return lt.select_banra();
 
         }
+        public DataTable getReport()
+        {
+            return lt.getReport();
+
+        }
         public DataTable select_banra1()
         {
             return lt.select_banra1();

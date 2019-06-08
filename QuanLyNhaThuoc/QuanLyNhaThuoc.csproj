@@ -70,11 +70,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_banhang_mnv.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_banhang_mnv.Designer.cs">
       <DependentUpon>frm_banhang_mnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BaoCao.Designer.cs">
+      <DependentUpon>frm_BaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_chonthuoc.cs">
       <SubType>Form</SubType>
@@ -129,6 +145,18 @@
     </Compile>
     <Compile Include="frm_nhanvien_insert.Designer.cs">
       <DependentUpon>frm_nhanvien_insert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Baocao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Baocao.Designer.cs">
+      <DependentUpon>UserControl_Baocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_report.Designer.cs">
+      <DependentUpon>UserControl_report.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_taikhoan_insert.cs">
       <SubType>Form</SubType>
@@ -216,6 +244,9 @@
     <EmbeddedResource Include="frm_banhang_mnv.resx">
       <DependentUpon>frm_banhang_mnv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_BaoCao.resx">
+      <DependentUpon>frm_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_chonthuoc.resx">
       <DependentUpon>frm_chonthuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,8 +303,14 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="UserControl_banhang.resx">
       <DependentUpon>UserControl_banhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Baocao.resx">
+      <DependentUpon>UserControl_Baocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_khachhang.resx">
       <DependentUpon>UserControl_khachhang.cs</DependentUpon>
@@ -284,12 +321,37 @@
     <EmbeddedResource Include="UserControl_nhanvien.resx">
       <DependentUpon>UserControl_nhanvien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_report.resx">
+      <DependentUpon>UserControl_report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_taikhoan.resx">
       <DependentUpon>UserControl_taikhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_thuoc.resx">
       <DependentUpon>UserControl_thuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
     <None Include="HoaDon.xsc">
       <DependentUpon>HoaDon.xsd</DependentUpon>
     </None>
@@ -321,6 +383,7 @@
   <ItemGroup>
     <Content Include="img\delivery.png" />
     <Content Include="img\iconpill.ico" />
+    <Content Include="img\newspaper.png" />
     <Content Include="img\password.png" />
     <Content Include="img\pill.png" />
     <Content Include="img\pills.png" />

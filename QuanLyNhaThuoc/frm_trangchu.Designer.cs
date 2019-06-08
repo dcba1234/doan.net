@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_khachhang = new System.Windows.Forms.Button();
-            this.btn_kho = new System.Windows.Forms.Button();
-            this.btn_taikhoan = new System.Windows.Forms.Button();
-            this.btn_nhanvien = new System.Windows.Forms.Button();
-            this.btn_banhang = new System.Windows.Forms.Button();
             this.panel_side = new System.Windows.Forms.Panel();
-            this.btn_thuoc = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
             this.userControl_nhanvien1 = new QuanLyNhaThuoc.UserControl_nhanvien();
             this.userControl_khachhang1 = new QuanLyNhaThuoc.UserControl_khachhang();
             this.userControl_kho1 = new QuanLyNhaThuoc.UserControl_kho();
             this.userControl_taikhoan1 = new QuanLyNhaThuoc.UserControl_taikhoan();
             this.userControl_thuoc1 = new QuanLyNhaThuoc.UserControl_thuoc();
+            this.userControl_banhang1 = new QuanLyNhaThuoc.UserControl_banhang();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn_khachhang = new System.Windows.Forms.Button();
+            this.btn_kho = new System.Windows.Forms.Button();
+            this.btn_taikhoan = new System.Windows.Forms.Button();
+            this.btn_nhanvien = new System.Windows.Forms.Button();
+            this.btn_banhang = new System.Windows.Forms.Button();
+            this.btn_thuoc = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_khachhang);
             this.panel1.Controls.Add(this.btn_kho);
             this.panel1.Controls.Add(this.btn_taikhoan);
@@ -67,6 +69,120 @@
             this.panel1.Size = new System.Drawing.Size(203, 658);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel_side
+            // 
+            this.panel_side.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel_side.Location = new System.Drawing.Point(1, 70);
+            this.panel_side.Name = "panel_side";
+            this.panel_side.Size = new System.Drawing.Size(7, 64);
+            this.panel_side.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.userControl_nhanvien1);
+            this.panel2.Controls.Add(this.userControl_khachhang1);
+            this.panel2.Controls.Add(this.userControl_kho1);
+            this.panel2.Controls.Add(this.userControl_taikhoan1);
+            this.panel2.Controls.Add(this.userControl_thuoc1);
+            this.panel2.Controls.Add(this.userControl_banhang1);
+            this.panel2.Location = new System.Drawing.Point(206, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(990, 543);
+            this.panel2.TabIndex = 4;
+            // 
+            // userControl_nhanvien1
+            // 
+            this.userControl_nhanvien1.Location = new System.Drawing.Point(-3, 7);
+            this.userControl_nhanvien1.Name = "userControl_nhanvien1";
+            this.userControl_nhanvien1.Size = new System.Drawing.Size(979, 575);
+            this.userControl_nhanvien1.TabIndex = 2;
+            // 
+            // userControl_khachhang1
+            // 
+            this.userControl_khachhang1.Location = new System.Drawing.Point(-5, 7);
+            this.userControl_khachhang1.Name = "userControl_khachhang1";
+            this.userControl_khachhang1.Size = new System.Drawing.Size(981, 586);
+            this.userControl_khachhang1.TabIndex = 4;
+            // 
+            // userControl_kho1
+            // 
+            this.userControl_kho1.Location = new System.Drawing.Point(-3, 7);
+            this.userControl_kho1.Name = "userControl_kho1";
+            this.userControl_kho1.Size = new System.Drawing.Size(990, 583);
+            this.userControl_kho1.TabIndex = 3;
+            // 
+            // userControl_taikhoan1
+            // 
+            this.userControl_taikhoan1.Location = new System.Drawing.Point(-5, 7);
+            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
+            this.userControl_taikhoan1.Size = new System.Drawing.Size(992, 533);
+            this.userControl_taikhoan1.TabIndex = 1;
+            // 
+            // userControl_thuoc1
+            // 
+            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 7);
+            this.userControl_thuoc1.Name = "userControl_thuoc1";
+            this.userControl_thuoc1.Size = new System.Drawing.Size(976, 575);
+            this.userControl_thuoc1.TabIndex = 0;
+            // 
+            // userControl_banhang1
+            // 
+            this.userControl_banhang1.Location = new System.Drawing.Point(0, 7);
+            this.userControl_banhang1.Name = "userControl_banhang1";
+            this.userControl_banhang1.Size = new System.Drawing.Size(981, 586);
+            this.userControl_banhang1.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel3.Location = new System.Drawing.Point(203, -3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(990, 10);
+            this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(209, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Xin chào:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(306, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Admin";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel4.Location = new System.Drawing.Point(206, 62);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(990, 1);
+            this.panel4.TabIndex = 8;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::QuanLyNhaThuoc.Properties.Resources.power_button_off;
+            this.button2.Location = new System.Drawing.Point(1144, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(38, 37);
+            this.button2.TabIndex = 3;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_khachhang
             // 
@@ -148,14 +264,6 @@
             this.btn_banhang.UseVisualStyleBackColor = true;
             this.btn_banhang.Click += new System.EventHandler(this.btn_banhang_Click);
             // 
-            // panel_side
-            // 
-            this.panel_side.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel_side.Location = new System.Drawing.Point(1, 70);
-            this.panel_side.Name = "panel_side";
-            this.panel_side.Size = new System.Drawing.Size(7, 64);
-            this.panel_side.TabIndex = 4;
-            // 
             // btn_thuoc
             // 
             this.btn_thuoc.FlatAppearance.BorderSize = 0;
@@ -172,111 +280,21 @@
             this.btn_thuoc.UseVisualStyleBackColor = true;
             this.btn_thuoc.Click += new System.EventHandler(this.btn_thuoc_Click);
             // 
-            // panel2
+            // button1
             // 
-            this.panel2.Controls.Add(this.userControl_nhanvien1);
-            this.panel2.Controls.Add(this.userControl_khachhang1);
-            this.panel2.Controls.Add(this.userControl_kho1);
-            this.panel2.Controls.Add(this.userControl_taikhoan1);
-            this.panel2.Controls.Add(this.userControl_thuoc1);
-            this.panel2.Controls.Add(this.userControl_banhang1);
-            this.panel2.Location = new System.Drawing.Point(206, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(990, 543);
-            this.panel2.TabIndex = 4;
-            // 
-            // userControl_banhang1
-            // 
-            this.userControl_banhang1.Location = new System.Drawing.Point(0, 7);
-            this.userControl_banhang1.Name = "userControl_banhang1";
-            this.userControl_banhang1.Size = new System.Drawing.Size(981, 586);
-            this.userControl_banhang1.TabIndex = 5;
-            // 
-            // userControl_nhanvien1
-            // 
-            this.userControl_nhanvien1.Location = new System.Drawing.Point(-3, 7);
-            this.userControl_nhanvien1.Name = "userControl_nhanvien1";
-            this.userControl_nhanvien1.Size = new System.Drawing.Size(979, 575);
-            this.userControl_nhanvien1.TabIndex = 2;
-            // 
-            // userControl_khachhang1
-            // 
-            this.userControl_khachhang1.Location = new System.Drawing.Point(-5, 7);
-            this.userControl_khachhang1.Name = "userControl_khachhang1";
-            this.userControl_khachhang1.Size = new System.Drawing.Size(981, 586);
-            this.userControl_khachhang1.TabIndex = 4;
-            // 
-            // userControl_kho1
-            // 
-            this.userControl_kho1.Location = new System.Drawing.Point(-3, 7);
-            this.userControl_kho1.Name = "userControl_kho1";
-            this.userControl_kho1.Size = new System.Drawing.Size(990, 583);
-            this.userControl_kho1.TabIndex = 3;
-            // 
-            // userControl_taikhoan1
-            // 
-            this.userControl_taikhoan1.Location = new System.Drawing.Point(-5, 7);
-            this.userControl_taikhoan1.Name = "userControl_taikhoan1";
-            this.userControl_taikhoan1.Size = new System.Drawing.Size(992, 533);
-            this.userControl_taikhoan1.TabIndex = 1;
-            // 
-            // userControl_thuoc1
-            // 
-            this.userControl_thuoc1.Location = new System.Drawing.Point(0, 7);
-            this.userControl_thuoc1.Name = "userControl_thuoc1";
-            this.userControl_thuoc1.Size = new System.Drawing.Size(976, 575);
-            this.userControl_thuoc1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel3.Location = new System.Drawing.Point(203, -3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(990, 10);
-            this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(209, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Xin chào:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(306, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Admin";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel4.Location = new System.Drawing.Point(206, 62);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(990, 1);
-            this.panel4.TabIndex = 8;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::QuanLyNhaThuoc.Properties.Resources.power_button_off;
-            this.button2.Location = new System.Drawing.Point(1144, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 37);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = global::QuanLyNhaThuoc.Properties.Resources.newspaper;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 533);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 72);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_trangchu
             // 
@@ -324,5 +342,6 @@
         private UserControl_taikhoan userControl_taikhoan1;
         private UserControl_thuoc userControl_thuoc1;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

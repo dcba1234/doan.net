@@ -186,5 +186,11 @@ namespace QuanLyNhaThuoc
             frm_kho_insert f = new frm_kho_insert(this);
             f.ShowDialog();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            (dg_kho.DataSource as DataTable).DefaultView.RowFilter =
+            string.Format("[Mã lô] LIKE '{0}%' ", textBox1.Text);
+        }
     }
 }
